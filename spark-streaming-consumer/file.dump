@@ -1,0 +1,641 @@
+2015-05-09 21:07:36,748 WARN  [main] util.Utils (Logging.scala:logWarning(71)) - Your hostname, quickstart.cloudera resolves to a loopback address: 127.0.0.1; using 192.168.1.110 instead (on interface eth0)
+2015-05-09 21:07:36,784 WARN  [main] util.Utils (Logging.scala:logWarning(71)) - Set SPARK_LOCAL_IP if you need to bind to another address
+2015-05-09 21:07:37,032 INFO  [main] spark.SecurityManager (Logging.scala:logInfo(59)) - Changing view acls to: cloudera
+2015-05-09 21:07:37,037 INFO  [main] spark.SecurityManager (Logging.scala:logInfo(59)) - Changing modify acls to: cloudera
+2015-05-09 21:07:37,040 INFO  [main] spark.SecurityManager (Logging.scala:logInfo(59)) - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(cloudera); users with modify permissions: Set(cloudera)
+2015-05-09 21:07:40,338 INFO  [sparkDriver-akka.actor.default-dispatcher-2] slf4j.Slf4jLogger (Slf4jLogger.scala:applyOrElse(80)) - Slf4jLogger started
+2015-05-09 21:07:40,768 INFO  [sparkDriver-akka.actor.default-dispatcher-4] Remoting (Slf4jLogger.scala:apply$mcV$sp(74)) - Starting remoting
+2015-05-09 21:07:41,824 INFO  [sparkDriver-akka.actor.default-dispatcher-5] Remoting (Slf4jLogger.scala:apply$mcV$sp(74)) - Remoting started; listening on addresses :[akka.tcp://sparkDriver@192.168.1.110:38147]
+2015-05-09 21:07:41,898 INFO  [sparkDriver-akka.actor.default-dispatcher-5] Remoting (Slf4jLogger.scala:apply$mcV$sp(74)) - Remoting now listens on addresses: [akka.tcp://sparkDriver@192.168.1.110:38147]
+2015-05-09 21:07:41,978 INFO  [main] util.Utils (Logging.scala:logInfo(59)) - Successfully started service 'sparkDriver' on port 38147.
+2015-05-09 21:07:42,143 INFO  [main] spark.SparkEnv (Logging.scala:logInfo(59)) - Registering MapOutputTracker
+2015-05-09 21:07:42,231 INFO  [main] spark.SparkEnv (Logging.scala:logInfo(59)) - Registering BlockManagerMaster
+2015-05-09 21:07:42,418 INFO  [main] storage.DiskBlockManager (Logging.scala:logInfo(59)) - Created local directory at /tmp/spark-local-20150509210742-364e
+2015-05-09 21:07:42,446 INFO  [main] storage.MemoryStore (Logging.scala:logInfo(59)) - MemoryStore started with capacity 267.3 MB
+2015-05-09 21:07:44,366 WARN  [main] util.NativeCodeLoader (NativeCodeLoader.java:<clinit>(62)) - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2015-05-09 21:07:45,500 INFO  [main] spark.HttpFileServer (Logging.scala:logInfo(59)) - HTTP File server directory is /tmp/spark-22bcf339-4563-44a9-89ef-220b7a2714da
+2015-05-09 21:07:45,544 INFO  [main] spark.HttpServer (Logging.scala:logInfo(59)) - Starting HTTP Server
+2015-05-09 21:07:46,144 INFO  [main] server.Server (Server.java:doStart(272)) - jetty-8.y.z-SNAPSHOT
+2015-05-09 21:07:46,206 INFO  [main] server.AbstractConnector (AbstractConnector.java:doStart(338)) - Started SocketConnector@0.0.0.0:53686
+2015-05-09 21:07:46,210 INFO  [main] util.Utils (Logging.scala:logInfo(59)) - Successfully started service 'HTTP file server' on port 53686.
+2015-05-09 21:07:46,920 INFO  [main] server.Server (Server.java:doStart(272)) - jetty-8.y.z-SNAPSHOT
+2015-05-09 21:07:46,993 INFO  [main] server.AbstractConnector (AbstractConnector.java:doStart(338)) - Started SelectChannelConnector@0.0.0.0:4040
+2015-05-09 21:07:46,993 INFO  [main] util.Utils (Logging.scala:logInfo(59)) - Successfully started service 'SparkUI' on port 4040.
+2015-05-09 21:07:47,008 INFO  [main] ui.SparkUI (Logging.scala:logInfo(59)) - Started SparkUI at http://192.168.1.110:4040
+2015-05-09 21:07:48,732 INFO  [main] spark.SparkContext (Logging.scala:logInfo(59)) - Added JAR file:/home/cloudera/workspace/tarea4/spark-streaming-consumer/target/spark-streaming-consumer-1.0-SNAPSHOT-jar-with-dependencies.jar at http://192.168.1.110:53686/jars/spark-streaming-consumer-1.0-SNAPSHOT-jar-with-dependencies.jar with timestamp 1431230868728
+2015-05-09 21:07:49,969 INFO  [sparkDriver-akka.actor.default-dispatcher-4] util.AkkaUtils (Logging.scala:logInfo(59)) - Connecting to HeartbeatReceiver: akka.tcp://sparkDriver@192.168.1.110:38147/user/HeartbeatReceiver
+2015-05-09 21:07:51,564 INFO  [main] netty.NettyBlockTransferService (Logging.scala:logInfo(59)) - Server created on 43394
+2015-05-09 21:07:51,568 INFO  [main] storage.BlockManagerMaster (Logging.scala:logInfo(59)) - Trying to register BlockManager
+2015-05-09 21:07:51,579 INFO  [sparkDriver-akka.actor.default-dispatcher-4] storage.BlockManagerMasterActor (Logging.scala:logInfo(59)) - Registering block manager localhost:43394 with 267.3 MB RAM, BlockManagerId(<driver>, localhost, 43394)
+2015-05-09 21:07:51,588 INFO  [main] storage.BlockManagerMaster (Logging.scala:logInfo(59)) - Registered BlockManager
+2015-05-09 21:07:52,668 INFO  [main] utils.VerifiableProperties (Logging.scala:info(68)) - Verifying properties
+2015-05-09 21:07:52,695 INFO  [main] utils.VerifiableProperties (Logging.scala:info(68)) - Property group.id is overridden to 
+2015-05-09 21:07:52,697 INFO  [main] utils.VerifiableProperties (Logging.scala:info(68)) - Property zookeeper.connect is overridden to 
+2015-05-09 21:07:54,623 INFO  [main] dstream.ForEachDStream (Logging.scala:logInfo(59)) - metadataCleanupDelay = -1
+2015-05-09 21:07:54,629 INFO  [main] kafka.DirectKafkaInputDStream (Logging.scala:logInfo(59)) - metadataCleanupDelay = -1
+2015-05-09 21:07:54,631 INFO  [main] kafka.DirectKafkaInputDStream (Logging.scala:logInfo(59)) - Slide time = 2000 ms
+2015-05-09 21:07:54,633 INFO  [main] kafka.DirectKafkaInputDStream (Logging.scala:logInfo(59)) - Storage level = StorageLevel(false, false, false, false, 1)
+2015-05-09 21:07:54,635 INFO  [main] kafka.DirectKafkaInputDStream (Logging.scala:logInfo(59)) - Checkpoint interval = null
+2015-05-09 21:07:54,636 INFO  [main] kafka.DirectKafkaInputDStream (Logging.scala:logInfo(59)) - Remember duration = 2000 ms
+2015-05-09 21:07:54,637 INFO  [main] kafka.DirectKafkaInputDStream (Logging.scala:logInfo(59)) - Initialized and validated org.apache.spark.streaming.kafka.DirectKafkaInputDStream@f3f5e19
+2015-05-09 21:07:54,637 INFO  [main] dstream.ForEachDStream (Logging.scala:logInfo(59)) - Slide time = 2000 ms
+2015-05-09 21:07:54,637 INFO  [main] dstream.ForEachDStream (Logging.scala:logInfo(59)) - Storage level = StorageLevel(false, false, false, false, 1)
+2015-05-09 21:07:54,637 INFO  [main] dstream.ForEachDStream (Logging.scala:logInfo(59)) - Checkpoint interval = null
+2015-05-09 21:07:54,637 INFO  [main] dstream.ForEachDStream (Logging.scala:logInfo(59)) - Remember duration = 2000 ms
+2015-05-09 21:07:54,637 INFO  [main] dstream.ForEachDStream (Logging.scala:logInfo(59)) - Initialized and validated org.apache.spark.streaming.dstream.ForEachDStream@93ac321
+2015-05-09 21:07:55,122 INFO  [main] util.RecurringTimer (Logging.scala:logInfo(59)) - Started timer for JobGenerator at time 1431230876000
+2015-05-09 21:07:55,128 INFO  [main] scheduler.JobGenerator (Logging.scala:logInfo(59)) - Started JobGenerator at 1431230876000 ms
+2015-05-09 21:07:55,130 INFO  [main] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Started JobScheduler
+2015-05-09 21:07:56,087 INFO  [sparkDriver-akka.actor.default-dispatcher-3] utils.VerifiableProperties (Logging.scala:info(68)) - Verifying properties
+2015-05-09 21:07:56,097 INFO  [sparkDriver-akka.actor.default-dispatcher-3] utils.VerifiableProperties (Logging.scala:info(68)) - Property group.id is overridden to 
+2015-05-09 21:07:56,097 INFO  [sparkDriver-akka.actor.default-dispatcher-3] utils.VerifiableProperties (Logging.scala:info(68)) - Property zookeeper.connect is overridden to 
+2015-05-09 21:07:56,296 INFO  [sparkDriver-akka.actor.default-dispatcher-3] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Added jobs for time 1431230876000 ms
+2015-05-09 21:07:56,338 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Starting job streaming job 1431230876000 ms.0 from job set of time 1431230876000 ms
+2015-05-09 21:07:56,389 INFO  [pool-5-thread-1] spark.SparkContext (Logging.scala:logInfo(59)) - Starting job: foreach at App.java:82
+2015-05-09 21:07:56,479 INFO  [sparkDriver-akka.actor.default-dispatcher-3] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Got job 0 (foreach at App.java:82) with 1 output partitions (allowLocal=false)
+2015-05-09 21:07:56,481 INFO  [sparkDriver-akka.actor.default-dispatcher-3] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Final stage: Stage 0(foreach at App.java:82)
+2015-05-09 21:07:56,501 INFO  [sparkDriver-akka.actor.default-dispatcher-3] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Parents of final stage: List()
+2015-05-09 21:07:56,524 INFO  [sparkDriver-akka.actor.default-dispatcher-3] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Missing parents: List()
+2015-05-09 21:07:56,610 INFO  [sparkDriver-akka.actor.default-dispatcher-3] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting Stage 0 (KafkaRDD[0] at createDirectStream at App.java:51), which has no missing parents
+2015-05-09 21:07:57,064 INFO  [sparkDriver-akka.actor.default-dispatcher-3] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1928) called with curMem=0, maxMem=280248975
+2015-05-09 21:07:57,072 INFO  [sparkDriver-akka.actor.default-dispatcher-3] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_0 stored as values in memory (estimated size 1928.0 B, free 267.3 MB)
+2015-05-09 21:07:57,771 INFO  [sparkDriver-akka.actor.default-dispatcher-3] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1207) called with curMem=1928, maxMem=280248975
+2015-05-09 21:07:57,776 INFO  [sparkDriver-akka.actor.default-dispatcher-3] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_0_piece0 stored as bytes in memory (estimated size 1207.0 B, free 267.3 MB)
+2015-05-09 21:07:57,793 INFO  [sparkDriver-akka.actor.default-dispatcher-14] storage.BlockManagerInfo (Logging.scala:logInfo(59)) - Added broadcast_0_piece0 in memory on localhost:43394 (size: 1207.0 B, free: 267.3 MB)
+2015-05-09 21:07:57,798 INFO  [sparkDriver-akka.actor.default-dispatcher-3] storage.BlockManagerMaster (Logging.scala:logInfo(59)) - Updated info of block broadcast_0_piece0
+2015-05-09 21:07:57,802 INFO  [sparkDriver-akka.actor.default-dispatcher-3] spark.SparkContext (Logging.scala:logInfo(59)) - Created broadcast 0 from getCallSite at DStream.scala:294
+2015-05-09 21:07:57,878 INFO  [sparkDriver-akka.actor.default-dispatcher-3] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting 1 missing tasks from Stage 0 (KafkaRDD[0] at createDirectStream at App.java:51)
+2015-05-09 21:07:57,878 INFO  [sparkDriver-akka.actor.default-dispatcher-3] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Adding task set 0.0 with 1 tasks
+2015-05-09 21:07:57,964 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Starting task 0.0 in stage 0.0 (TID 0, localhost, ANY, 1289 bytes)
+2015-05-09 21:07:57,984 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Running task 0.0 in stage 0.0 (TID 0)
+2015-05-09 21:07:58,022 INFO  [sparkDriver-akka.actor.default-dispatcher-3] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Added jobs for time 1431230878000 ms
+2015-05-09 21:07:58,046 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Fetching http://192.168.1.110:53686/jars/spark-streaming-consumer-1.0-SNAPSHOT-jar-with-dependencies.jar with timestamp 1431230868728
+2015-05-09 21:07:58,179 INFO  [Executor task launch worker-0] util.Utils (Logging.scala:logInfo(59)) - Fetching http://192.168.1.110:53686/jars/spark-streaming-consumer-1.0-SNAPSHOT-jar-with-dependencies.jar to /tmp/fetchFileTemp7017860867647994614.tmp
+2015-05-09 21:07:58,918 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Adding file:/tmp/spark-b35b2fa5-be9c-42ab-9476-3024bbfd5032/spark-streaming-consumer-1.0-SNAPSHOT-jar-with-dependencies.jar to class loader
+2015-05-09 21:07:59,352 WARN  [Executor task launch worker-0] kafka.KafkaRDD (KafkaRDD.scala:compute(89)) - Beginning offset ${part.fromOffset} is the same as ending offset skipping topicTest 0
+2015-05-09 21:07:59,386 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 0.0 (TID 0). 649 bytes result sent to driver
+2015-05-09 21:07:59,401 INFO  [sparkDriver-akka.actor.default-dispatcher-4] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Stage 0 (foreach at App.java:82) finished in 1.482 s
+2015-05-09 21:07:59,410 INFO  [task-result-getter-0] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 0.0 (TID 0) in 1448 ms on localhost (1/1)
+2015-05-09 21:07:59,430 INFO  [task-result-getter-0] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Removed TaskSet 0.0, whose tasks have all completed, from pool 
+2015-05-09 21:07:59,454 INFO  [pool-5-thread-1] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Job 0 finished: foreach at App.java:82, took 3.063746 s
+RDD Count: 0
+2015-05-09 21:07:59,629 INFO  [sparkDriver-akka.actor.default-dispatcher-4] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Finished job streaming job 1431230876000 ms.0 from job set of time 1431230876000 ms
+2015-05-09 21:07:59,644 INFO  [sparkDriver-akka.actor.default-dispatcher-4] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Total delay: 3.629 s for time 1431230876000 ms (execution: 3.300 s)
+2015-05-09 21:07:59,644 INFO  [sparkDriver-akka.actor.default-dispatcher-4] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Starting job streaming job 1431230878000 ms.0 from job set of time 1431230878000 ms
+2015-05-09 21:07:59,673 INFO  [pool-5-thread-1] spark.SparkContext (Logging.scala:logInfo(59)) - Starting job: foreach at App.java:82
+2015-05-09 21:07:59,693 INFO  [sparkDriver-akka.actor.default-dispatcher-4] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Got job 1 (foreach at App.java:82) with 1 output partitions (allowLocal=false)
+2015-05-09 21:07:59,694 INFO  [sparkDriver-akka.actor.default-dispatcher-4] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Final stage: Stage 1(foreach at App.java:82)
+2015-05-09 21:07:59,694 INFO  [sparkDriver-akka.actor.default-dispatcher-4] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Parents of final stage: List()
+2015-05-09 21:07:59,703 INFO  [sparkDriver-akka.actor.default-dispatcher-4] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Missing parents: List()
+2015-05-09 21:07:59,703 INFO  [sparkDriver-akka.actor.default-dispatcher-4] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting Stage 1 (KafkaRDD[1] at createDirectStream at App.java:51), which has no missing parents
+2015-05-09 21:07:59,741 INFO  [sparkDriver-akka.actor.default-dispatcher-5] scheduler.ReceivedBlockTracker (Logging.scala:logInfo(59)) - Deleting batches ArrayBuffer()
+2015-05-09 21:07:59,755 INFO  [sparkDriver-akka.actor.default-dispatcher-4] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1928) called with curMem=3135, maxMem=280248975
+2015-05-09 21:07:59,829 INFO  [sparkDriver-akka.actor.default-dispatcher-4] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_1 stored as values in memory (estimated size 1928.0 B, free 267.3 MB)
+2015-05-09 21:07:59,863 INFO  [sparkDriver-akka.actor.default-dispatcher-4] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1204) called with curMem=5063, maxMem=280248975
+2015-05-09 21:07:59,866 INFO  [sparkDriver-akka.actor.default-dispatcher-4] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_1_piece0 stored as bytes in memory (estimated size 1204.0 B, free 267.3 MB)
+2015-05-09 21:07:59,869 INFO  [sparkDriver-akka.actor.default-dispatcher-5] storage.BlockManagerInfo (Logging.scala:logInfo(59)) - Added broadcast_1_piece0 in memory on localhost:43394 (size: 1204.0 B, free: 267.3 MB)
+2015-05-09 21:07:59,909 INFO  [sparkDriver-akka.actor.default-dispatcher-4] storage.BlockManagerMaster (Logging.scala:logInfo(59)) - Updated info of block broadcast_1_piece0
+2015-05-09 21:07:59,912 INFO  [sparkDriver-akka.actor.default-dispatcher-4] spark.SparkContext (Logging.scala:logInfo(59)) - Created broadcast 1 from broadcast at DAGScheduler.scala:838
+2015-05-09 21:07:59,914 INFO  [sparkDriver-akka.actor.default-dispatcher-4] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting 1 missing tasks from Stage 1 (KafkaRDD[1] at createDirectStream at App.java:51)
+2015-05-09 21:07:59,915 INFO  [sparkDriver-akka.actor.default-dispatcher-4] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Adding task set 1.0 with 1 tasks
+2015-05-09 21:07:59,929 INFO  [sparkDriver-akka.actor.default-dispatcher-4] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Starting task 0.0 in stage 1.0 (TID 1, localhost, ANY, 1289 bytes)
+2015-05-09 21:07:59,930 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Running task 0.0 in stage 1.0 (TID 1)
+2015-05-09 21:07:59,940 WARN  [Executor task launch worker-0] kafka.KafkaRDD (KafkaRDD.scala:compute(89)) - Beginning offset ${part.fromOffset} is the same as ending offset skipping topicTest 0
+2015-05-09 21:07:59,942 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 1.0 (TID 1). 649 bytes result sent to driver
+2015-05-09 21:07:59,950 INFO  [task-result-getter-1] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 1.0 (TID 1) in 28 ms on localhost (1/1)
+2015-05-09 21:07:59,950 INFO  [task-result-getter-1] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Removed TaskSet 1.0, whose tasks have all completed, from pool 
+2015-05-09 21:07:59,956 INFO  [sparkDriver-akka.actor.default-dispatcher-4] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Stage 1 (foreach at App.java:82) finished in 0.029 s
+2015-05-09 21:07:59,956 INFO  [pool-5-thread-1] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Job 1 finished: foreach at App.java:82, took 0.282803 s
+RDD Count: 0
+2015-05-09 21:07:59,957 INFO  [sparkDriver-akka.actor.default-dispatcher-5] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Finished job streaming job 1431230878000 ms.0 from job set of time 1431230878000 ms
+2015-05-09 21:07:59,958 INFO  [sparkDriver-akka.actor.default-dispatcher-5] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Total delay: 1.957 s for time 1431230878000 ms (execution: 0.313 s)
+2015-05-09 21:07:59,961 INFO  [sparkDriver-akka.actor.default-dispatcher-5] kafka.KafkaRDD (Logging.scala:logInfo(59)) - Removing RDD 0 from persistence list
+2015-05-09 21:07:59,979 INFO  [sparkDriver-akka.actor.default-dispatcher-3] storage.BlockManager (Logging.scala:logInfo(59)) - Removing RDD 0
+2015-05-09 21:08:00,022 INFO  [sparkDriver-akka.actor.default-dispatcher-5] scheduler.ReceivedBlockTracker (Logging.scala:logInfo(59)) - Deleting batches ArrayBuffer()
+2015-05-09 21:08:00,088 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Starting job streaming job 1431230880000 ms.0 from job set of time 1431230880000 ms
+2015-05-09 21:08:00,089 INFO  [sparkDriver-akka.actor.default-dispatcher-5] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Added jobs for time 1431230880000 ms
+2015-05-09 21:08:00,094 INFO  [pool-5-thread-1] spark.SparkContext (Logging.scala:logInfo(59)) - Starting job: foreach at App.java:82
+2015-05-09 21:08:00,098 INFO  [sparkDriver-akka.actor.default-dispatcher-5] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Got job 2 (foreach at App.java:82) with 1 output partitions (allowLocal=false)
+2015-05-09 21:08:00,098 INFO  [sparkDriver-akka.actor.default-dispatcher-5] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Final stage: Stage 2(foreach at App.java:82)
+2015-05-09 21:08:00,099 INFO  [sparkDriver-akka.actor.default-dispatcher-5] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Parents of final stage: List()
+2015-05-09 21:08:00,101 INFO  [sparkDriver-akka.actor.default-dispatcher-5] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Missing parents: List()
+2015-05-09 21:08:00,104 INFO  [sparkDriver-akka.actor.default-dispatcher-5] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting Stage 2 (KafkaRDD[2] at createDirectStream at App.java:51), which has no missing parents
+2015-05-09 21:08:00,143 INFO  [sparkDriver-akka.actor.default-dispatcher-5] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1928) called with curMem=6267, maxMem=280248975
+2015-05-09 21:08:00,175 INFO  [sparkDriver-akka.actor.default-dispatcher-5] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_2 stored as values in memory (estimated size 1928.0 B, free 267.3 MB)
+2015-05-09 21:08:00,181 INFO  [sparkDriver-akka.actor.default-dispatcher-5] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1208) called with curMem=8195, maxMem=280248975
+2015-05-09 21:08:00,181 INFO  [sparkDriver-akka.actor.default-dispatcher-5] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_2_piece0 stored as bytes in memory (estimated size 1208.0 B, free 267.3 MB)
+2015-05-09 21:08:00,183 INFO  [sparkDriver-akka.actor.default-dispatcher-13] storage.BlockManagerInfo (Logging.scala:logInfo(59)) - Added broadcast_2_piece0 in memory on localhost:43394 (size: 1208.0 B, free: 267.3 MB)
+2015-05-09 21:08:00,185 INFO  [sparkDriver-akka.actor.default-dispatcher-5] storage.BlockManagerMaster (Logging.scala:logInfo(59)) - Updated info of block broadcast_2_piece0
+2015-05-09 21:08:00,186 INFO  [sparkDriver-akka.actor.default-dispatcher-5] spark.SparkContext (Logging.scala:logInfo(59)) - Created broadcast 2 from getCallSite at DStream.scala:294
+2015-05-09 21:08:00,196 INFO  [sparkDriver-akka.actor.default-dispatcher-5] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting 1 missing tasks from Stage 2 (KafkaRDD[2] at createDirectStream at App.java:51)
+2015-05-09 21:08:00,197 INFO  [sparkDriver-akka.actor.default-dispatcher-5] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Adding task set 2.0 with 1 tasks
+2015-05-09 21:08:00,206 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Starting task 0.0 in stage 2.0 (TID 2, localhost, ANY, 1289 bytes)
+2015-05-09 21:08:00,207 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Running task 0.0 in stage 2.0 (TID 2)
+2015-05-09 21:08:00,225 WARN  [Executor task launch worker-0] kafka.KafkaRDD (KafkaRDD.scala:compute(89)) - Beginning offset ${part.fromOffset} is the same as ending offset skipping topicTest 0
+2015-05-09 21:08:00,225 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 2.0 (TID 2). 649 bytes result sent to driver
+2015-05-09 21:08:00,247 INFO  [sparkDriver-akka.actor.default-dispatcher-5] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Stage 2 (foreach at App.java:82) finished in 0.041 s
+2015-05-09 21:08:00,249 INFO  [pool-5-thread-1] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Job 2 finished: foreach at App.java:82, took 0.154319 s
+RDD Count: 0
+2015-05-09 21:08:00,253 INFO  [sparkDriver-akka.actor.default-dispatcher-5] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Finished job streaming job 1431230880000 ms.0 from job set of time 1431230880000 ms
+2015-05-09 21:08:00,255 INFO  [sparkDriver-akka.actor.default-dispatcher-5] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Total delay: 0.253 s for time 1431230880000 ms (execution: 0.165 s)
+2015-05-09 21:08:00,256 INFO  [sparkDriver-akka.actor.default-dispatcher-5] kafka.KafkaRDD (Logging.scala:logInfo(59)) - Removing RDD 1 from persistence list
+2015-05-09 21:08:00,260 INFO  [task-result-getter-2] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 2.0 (TID 2) in 39 ms on localhost (1/1)
+2015-05-09 21:08:00,260 INFO  [task-result-getter-2] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Removed TaskSet 2.0, whose tasks have all completed, from pool 
+2015-05-09 21:08:00,260 INFO  [sparkDriver-akka.actor.default-dispatcher-5] scheduler.ReceivedBlockTracker (Logging.scala:logInfo(59)) - Deleting batches ArrayBuffer()
+2015-05-09 21:08:00,260 INFO  [sparkDriver-akka.actor.default-dispatcher-14] storage.BlockManager (Logging.scala:logInfo(59)) - Removing RDD 1
+2015-05-09 21:08:02,099 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Starting job streaming job 1431230882000 ms.0 from job set of time 1431230882000 ms
+2015-05-09 21:08:02,099 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Added jobs for time 1431230882000 ms
+2015-05-09 21:08:02,142 INFO  [pool-5-thread-1] spark.SparkContext (Logging.scala:logInfo(59)) - Starting job: foreach at App.java:82
+2015-05-09 21:08:02,142 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Got job 3 (foreach at App.java:82) with 1 output partitions (allowLocal=false)
+2015-05-09 21:08:02,142 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Final stage: Stage 3(foreach at App.java:82)
+2015-05-09 21:08:02,142 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Parents of final stage: List()
+2015-05-09 21:08:02,146 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Missing parents: List()
+2015-05-09 21:08:02,148 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting Stage 3 (KafkaRDD[3] at createDirectStream at App.java:51), which has no missing parents
+2015-05-09 21:08:02,155 INFO  [sparkDriver-akka.actor.default-dispatcher-13] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1928) called with curMem=9403, maxMem=280248975
+2015-05-09 21:08:02,174 INFO  [sparkDriver-akka.actor.default-dispatcher-13] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_3 stored as values in memory (estimated size 1928.0 B, free 267.3 MB)
+2015-05-09 21:08:02,189 INFO  [sparkDriver-akka.actor.default-dispatcher-13] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1207) called with curMem=11331, maxMem=280248975
+2015-05-09 21:08:02,192 INFO  [sparkDriver-akka.actor.default-dispatcher-13] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_3_piece0 stored as bytes in memory (estimated size 1207.0 B, free 267.3 MB)
+2015-05-09 21:08:02,192 INFO  [sparkDriver-akka.actor.default-dispatcher-16] storage.BlockManagerInfo (Logging.scala:logInfo(59)) - Added broadcast_3_piece0 in memory on localhost:43394 (size: 1207.0 B, free: 267.3 MB)
+2015-05-09 21:08:02,201 INFO  [sparkDriver-akka.actor.default-dispatcher-13] storage.BlockManagerMaster (Logging.scala:logInfo(59)) - Updated info of block broadcast_3_piece0
+2015-05-09 21:08:02,202 INFO  [sparkDriver-akka.actor.default-dispatcher-13] spark.SparkContext (Logging.scala:logInfo(59)) - Created broadcast 3 from getCallSite at DStream.scala:294
+2015-05-09 21:08:02,205 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting 1 missing tasks from Stage 3 (KafkaRDD[3] at createDirectStream at App.java:51)
+2015-05-09 21:08:02,205 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Adding task set 3.0 with 1 tasks
+2015-05-09 21:08:02,241 INFO  [sparkDriver-akka.actor.default-dispatcher-16] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Starting task 0.0 in stage 3.0 (TID 3, localhost, ANY, 1289 bytes)
+2015-05-09 21:08:02,256 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Running task 0.0 in stage 3.0 (TID 3)
+2015-05-09 21:08:02,266 WARN  [Executor task launch worker-0] kafka.KafkaRDD (KafkaRDD.scala:compute(89)) - Beginning offset ${part.fromOffset} is the same as ending offset skipping topicTest 0
+2015-05-09 21:08:02,269 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 3.0 (TID 3). 649 bytes result sent to driver
+2015-05-09 21:08:02,350 INFO  [task-result-getter-3] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 3.0 (TID 3) in 112 ms on localhost (1/1)
+2015-05-09 21:08:02,350 INFO  [task-result-getter-3] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Removed TaskSet 3.0, whose tasks have all completed, from pool 
+2015-05-09 21:08:02,352 INFO  [sparkDriver-akka.actor.default-dispatcher-16] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Stage 3 (foreach at App.java:82) finished in 0.107 s
+2015-05-09 21:08:02,366 INFO  [pool-5-thread-1] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Job 3 finished: foreach at App.java:82, took 0.223110 s
+RDD Count: 0
+2015-05-09 21:08:02,377 INFO  [sparkDriver-akka.actor.default-dispatcher-16] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Finished job streaming job 1431230882000 ms.0 from job set of time 1431230882000 ms
+2015-05-09 21:08:02,378 INFO  [sparkDriver-akka.actor.default-dispatcher-15] kafka.KafkaRDD (Logging.scala:logInfo(59)) - Removing RDD 2 from persistence list
+2015-05-09 21:08:02,381 INFO  [sparkDriver-akka.actor.default-dispatcher-3] storage.BlockManager (Logging.scala:logInfo(59)) - Removing RDD 2
+2015-05-09 21:08:02,387 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.ReceivedBlockTracker (Logging.scala:logInfo(59)) - Deleting batches ArrayBuffer()
+2015-05-09 21:08:02,401 INFO  [sparkDriver-akka.actor.default-dispatcher-16] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Total delay: 0.377 s for time 1431230882000 ms (execution: 0.278 s)
+2015-05-09 21:08:04,071 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Added jobs for time 1431230884000 ms
+2015-05-09 21:08:04,076 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Starting job streaming job 1431230884000 ms.0 from job set of time 1431230884000 ms
+2015-05-09 21:08:04,115 INFO  [pool-5-thread-1] spark.SparkContext (Logging.scala:logInfo(59)) - Starting job: foreach at App.java:82
+2015-05-09 21:08:04,119 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Got job 4 (foreach at App.java:82) with 1 output partitions (allowLocal=false)
+2015-05-09 21:08:04,140 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Final stage: Stage 4(foreach at App.java:82)
+2015-05-09 21:08:04,140 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Parents of final stage: List()
+2015-05-09 21:08:04,144 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Missing parents: List()
+2015-05-09 21:08:04,146 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting Stage 4 (KafkaRDD[4] at createDirectStream at App.java:51), which has no missing parents
+2015-05-09 21:08:04,155 INFO  [sparkDriver-akka.actor.default-dispatcher-14] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1928) called with curMem=12538, maxMem=280248975
+2015-05-09 21:08:04,171 INFO  [sparkDriver-akka.actor.default-dispatcher-14] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_4 stored as values in memory (estimated size 1928.0 B, free 267.3 MB)
+2015-05-09 21:08:04,181 INFO  [sparkDriver-akka.actor.default-dispatcher-14] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1207) called with curMem=14466, maxMem=280248975
+2015-05-09 21:08:04,181 INFO  [sparkDriver-akka.actor.default-dispatcher-14] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_4_piece0 stored as bytes in memory (estimated size 1207.0 B, free 267.3 MB)
+2015-05-09 21:08:04,184 INFO  [sparkDriver-akka.actor.default-dispatcher-2] storage.BlockManagerInfo (Logging.scala:logInfo(59)) - Added broadcast_4_piece0 in memory on localhost:43394 (size: 1207.0 B, free: 267.3 MB)
+2015-05-09 21:08:04,185 INFO  [sparkDriver-akka.actor.default-dispatcher-14] storage.BlockManagerMaster (Logging.scala:logInfo(59)) - Updated info of block broadcast_4_piece0
+2015-05-09 21:08:04,200 INFO  [sparkDriver-akka.actor.default-dispatcher-14] spark.SparkContext (Logging.scala:logInfo(59)) - Created broadcast 4 from broadcast at DAGScheduler.scala:838
+2015-05-09 21:08:04,206 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting 1 missing tasks from Stage 4 (KafkaRDD[4] at createDirectStream at App.java:51)
+2015-05-09 21:08:04,213 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Adding task set 4.0 with 1 tasks
+2015-05-09 21:08:04,240 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Starting task 0.0 in stage 4.0 (TID 4, localhost, ANY, 1289 bytes)
+2015-05-09 21:08:04,240 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Running task 0.0 in stage 4.0 (TID 4)
+2015-05-09 21:08:04,251 WARN  [Executor task launch worker-0] kafka.KafkaRDD (KafkaRDD.scala:compute(89)) - Beginning offset ${part.fromOffset} is the same as ending offset skipping topicTest 0
+2015-05-09 21:08:04,253 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 4.0 (TID 4). 649 bytes result sent to driver
+2015-05-09 21:08:04,258 INFO  [task-result-getter-0] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 4.0 (TID 4) in 16 ms on localhost (1/1)
+2015-05-09 21:08:04,259 INFO  [task-result-getter-0] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Removed TaskSet 4.0, whose tasks have all completed, from pool 
+2015-05-09 21:08:04,305 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Stage 4 (foreach at App.java:82) finished in 0.044 s
+2015-05-09 21:08:04,309 INFO  [pool-5-thread-1] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Job 4 finished: foreach at App.java:82, took 0.193075 s
+RDD Count: 0
+2015-05-09 21:08:04,311 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Finished job streaming job 1431230884000 ms.0 from job set of time 1431230884000 ms
+2015-05-09 21:08:04,312 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Total delay: 0.311 s for time 1431230884000 ms (execution: 0.235 s)
+2015-05-09 21:08:04,313 INFO  [sparkDriver-akka.actor.default-dispatcher-2] kafka.KafkaRDD (Logging.scala:logInfo(59)) - Removing RDD 3 from persistence list
+2015-05-09 21:08:04,316 INFO  [sparkDriver-akka.actor.default-dispatcher-4] storage.BlockManager (Logging.scala:logInfo(59)) - Removing RDD 3
+2015-05-09 21:08:04,318 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.ReceivedBlockTracker (Logging.scala:logInfo(59)) - Deleting batches ArrayBuffer()
+2015-05-09 21:08:06,053 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Starting job streaming job 1431230886000 ms.0 from job set of time 1431230886000 ms
+2015-05-09 21:08:06,053 INFO  [sparkDriver-akka.actor.default-dispatcher-5] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Added jobs for time 1431230886000 ms
+2015-05-09 21:08:06,069 INFO  [pool-5-thread-1] spark.SparkContext (Logging.scala:logInfo(59)) - Starting job: foreach at App.java:82
+2015-05-09 21:08:06,072 INFO  [sparkDriver-akka.actor.default-dispatcher-5] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Got job 5 (foreach at App.java:82) with 1 output partitions (allowLocal=false)
+2015-05-09 21:08:06,073 INFO  [sparkDriver-akka.actor.default-dispatcher-5] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Final stage: Stage 5(foreach at App.java:82)
+2015-05-09 21:08:06,073 INFO  [sparkDriver-akka.actor.default-dispatcher-5] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Parents of final stage: List()
+2015-05-09 21:08:06,099 INFO  [sparkDriver-akka.actor.default-dispatcher-5] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Missing parents: List()
+2015-05-09 21:08:06,099 INFO  [sparkDriver-akka.actor.default-dispatcher-5] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting Stage 5 (KafkaRDD[5] at createDirectStream at App.java:51), which has no missing parents
+2015-05-09 21:08:06,101 INFO  [sparkDriver-akka.actor.default-dispatcher-5] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1928) called with curMem=15673, maxMem=280248975
+2015-05-09 21:08:06,103 INFO  [sparkDriver-akka.actor.default-dispatcher-5] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_5 stored as values in memory (estimated size 1928.0 B, free 267.2 MB)
+2015-05-09 21:08:06,127 INFO  [sparkDriver-akka.actor.default-dispatcher-5] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1206) called with curMem=17601, maxMem=280248975
+2015-05-09 21:08:06,129 INFO  [sparkDriver-akka.actor.default-dispatcher-5] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_5_piece0 stored as bytes in memory (estimated size 1206.0 B, free 267.2 MB)
+2015-05-09 21:08:06,150 INFO  [sparkDriver-akka.actor.default-dispatcher-15] storage.BlockManagerInfo (Logging.scala:logInfo(59)) - Added broadcast_5_piece0 in memory on localhost:43394 (size: 1206.0 B, free: 267.3 MB)
+2015-05-09 21:08:06,151 INFO  [sparkDriver-akka.actor.default-dispatcher-5] storage.BlockManagerMaster (Logging.scala:logInfo(59)) - Updated info of block broadcast_5_piece0
+2015-05-09 21:08:06,153 INFO  [sparkDriver-akka.actor.default-dispatcher-5] spark.SparkContext (Logging.scala:logInfo(59)) - Created broadcast 5 from getCallSite at DStream.scala:294
+2015-05-09 21:08:06,158 INFO  [sparkDriver-akka.actor.default-dispatcher-5] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting 1 missing tasks from Stage 5 (KafkaRDD[5] at createDirectStream at App.java:51)
+2015-05-09 21:08:06,158 INFO  [sparkDriver-akka.actor.default-dispatcher-5] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Adding task set 5.0 with 1 tasks
+2015-05-09 21:08:06,163 INFO  [sparkDriver-akka.actor.default-dispatcher-3] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Starting task 0.0 in stage 5.0 (TID 5, localhost, ANY, 1289 bytes)
+2015-05-09 21:08:06,165 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Running task 0.0 in stage 5.0 (TID 5)
+2015-05-09 21:08:06,276 WARN  [Executor task launch worker-0] kafka.KafkaRDD (KafkaRDD.scala:compute(89)) - Beginning offset ${part.fromOffset} is the same as ending offset skipping topicTest 0
+2015-05-09 21:08:06,287 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 5.0 (TID 5). 649 bytes result sent to driver
+2015-05-09 21:08:06,306 INFO  [task-result-getter-1] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 5.0 (TID 5) in 144 ms on localhost (1/1)
+2015-05-09 21:08:06,308 INFO  [task-result-getter-1] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Removed TaskSet 5.0, whose tasks have all completed, from pool 
+2015-05-09 21:08:06,309 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Stage 5 (foreach at App.java:82) finished in 0.129 s
+2015-05-09 21:08:06,312 INFO  [pool-5-thread-1] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Job 5 finished: foreach at App.java:82, took 0.241795 s
+RDD Count: 0
+2015-05-09 21:08:06,313 INFO  [sparkDriver-akka.actor.default-dispatcher-5] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Finished job streaming job 1431230886000 ms.0 from job set of time 1431230886000 ms
+2015-05-09 21:08:06,314 INFO  [sparkDriver-akka.actor.default-dispatcher-5] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Total delay: 0.313 s for time 1431230886000 ms (execution: 0.260 s)
+2015-05-09 21:08:06,315 INFO  [sparkDriver-akka.actor.default-dispatcher-5] kafka.KafkaRDD (Logging.scala:logInfo(59)) - Removing RDD 4 from persistence list
+2015-05-09 21:08:06,318 INFO  [sparkDriver-akka.actor.default-dispatcher-3] storage.BlockManager (Logging.scala:logInfo(59)) - Removing RDD 4
+2015-05-09 21:08:06,319 INFO  [sparkDriver-akka.actor.default-dispatcher-5] scheduler.ReceivedBlockTracker (Logging.scala:logInfo(59)) - Deleting batches ArrayBuffer()
+2015-05-09 21:08:08,079 INFO  [sparkDriver-akka.actor.default-dispatcher-4] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Added jobs for time 1431230888000 ms
+2015-05-09 21:08:08,094 INFO  [pool-5-thread-1] spark.SparkContext (Logging.scala:logInfo(59)) - Starting job: foreach at App.java:82
+2015-05-09 21:08:08,096 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Starting job streaming job 1431230888000 ms.0 from job set of time 1431230888000 ms
+2015-05-09 21:08:08,096 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Got job 6 (foreach at App.java:82) with 1 output partitions (allowLocal=false)
+2015-05-09 21:08:08,096 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Final stage: Stage 6(foreach at App.java:82)
+2015-05-09 21:08:08,096 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Parents of final stage: List()
+2015-05-09 21:08:08,106 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Missing parents: List()
+2015-05-09 21:08:08,114 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting Stage 6 (KafkaRDD[6] at createDirectStream at App.java:51), which has no missing parents
+2015-05-09 21:08:08,125 INFO  [sparkDriver-akka.actor.default-dispatcher-13] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1928) called with curMem=18807, maxMem=280248975
+2015-05-09 21:08:08,127 INFO  [sparkDriver-akka.actor.default-dispatcher-13] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_6 stored as values in memory (estimated size 1928.0 B, free 267.2 MB)
+2015-05-09 21:08:08,178 INFO  [sparkDriver-akka.actor.default-dispatcher-13] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1207) called with curMem=20735, maxMem=280248975
+2015-05-09 21:08:08,178 INFO  [sparkDriver-akka.actor.default-dispatcher-13] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_6_piece0 stored as bytes in memory (estimated size 1207.0 B, free 267.2 MB)
+2015-05-09 21:08:08,178 INFO  [sparkDriver-akka.actor.default-dispatcher-4] storage.BlockManagerInfo (Logging.scala:logInfo(59)) - Added broadcast_6_piece0 in memory on localhost:43394 (size: 1207.0 B, free: 267.3 MB)
+2015-05-09 21:08:08,181 INFO  [sparkDriver-akka.actor.default-dispatcher-13] storage.BlockManagerMaster (Logging.scala:logInfo(59)) - Updated info of block broadcast_6_piece0
+2015-05-09 21:08:08,182 INFO  [sparkDriver-akka.actor.default-dispatcher-13] spark.SparkContext (Logging.scala:logInfo(59)) - Created broadcast 6 from getCallSite at DStream.scala:294
+2015-05-09 21:08:08,184 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting 1 missing tasks from Stage 6 (KafkaRDD[6] at createDirectStream at App.java:51)
+2015-05-09 21:08:08,185 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Adding task set 6.0 with 1 tasks
+2015-05-09 21:08:08,187 INFO  [sparkDriver-akka.actor.default-dispatcher-4] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Starting task 0.0 in stage 6.0 (TID 6, localhost, ANY, 1289 bytes)
+2015-05-09 21:08:08,187 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Running task 0.0 in stage 6.0 (TID 6)
+2015-05-09 21:08:08,203 WARN  [Executor task launch worker-0] kafka.KafkaRDD (KafkaRDD.scala:compute(89)) - Beginning offset ${part.fromOffset} is the same as ending offset skipping topicTest 0
+2015-05-09 21:08:08,203 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 6.0 (TID 6). 649 bytes result sent to driver
+2015-05-09 21:08:08,210 INFO  [task-result-getter-2] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 6.0 (TID 6) in 22 ms on localhost (1/1)
+2015-05-09 21:08:08,223 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Stage 6 (foreach at App.java:82) finished in 0.003 s
+2015-05-09 21:08:08,227 INFO  [pool-5-thread-1] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Job 6 finished: foreach at App.java:82, took 0.131440 s
+RDD Count: 0
+2015-05-09 21:08:08,227 INFO  [sparkDriver-akka.actor.default-dispatcher-5] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Finished job streaming job 1431230888000 ms.0 from job set of time 1431230888000 ms
+2015-05-09 21:08:08,227 INFO  [sparkDriver-akka.actor.default-dispatcher-5] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Total delay: 0.227 s for time 1431230888000 ms (execution: 0.131 s)
+2015-05-09 21:08:08,227 INFO  [sparkDriver-akka.actor.default-dispatcher-5] kafka.KafkaRDD (Logging.scala:logInfo(59)) - Removing RDD 5 from persistence list
+2015-05-09 21:08:08,227 INFO  [sparkDriver-akka.actor.default-dispatcher-15] storage.BlockManager (Logging.scala:logInfo(59)) - Removing RDD 5
+2015-05-09 21:08:08,227 INFO  [sparkDriver-akka.actor.default-dispatcher-5] scheduler.ReceivedBlockTracker (Logging.scala:logInfo(59)) - Deleting batches ArrayBuffer()
+2015-05-09 21:08:08,229 INFO  [task-result-getter-2] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Removed TaskSet 6.0, whose tasks have all completed, from pool 
+2015-05-09 21:08:10,099 INFO  [sparkDriver-akka.actor.default-dispatcher-16] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Starting job streaming job 1431230890000 ms.0 from job set of time 1431230890000 ms
+2015-05-09 21:08:10,109 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Added jobs for time 1431230890000 ms
+2015-05-09 21:08:10,184 INFO  [pool-5-thread-1] spark.SparkContext (Logging.scala:logInfo(59)) - Starting job: foreach at App.java:82
+2015-05-09 21:08:10,193 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Got job 7 (foreach at App.java:82) with 1 output partitions (allowLocal=false)
+2015-05-09 21:08:10,193 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Final stage: Stage 7(foreach at App.java:82)
+2015-05-09 21:08:10,193 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Parents of final stage: List()
+2015-05-09 21:08:10,195 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Missing parents: List()
+2015-05-09 21:08:10,197 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting Stage 7 (KafkaRDD[7] at createDirectStream at App.java:51), which has no missing parents
+2015-05-09 21:08:10,209 INFO  [sparkDriver-akka.actor.default-dispatcher-14] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1928) called with curMem=21942, maxMem=280248975
+2015-05-09 21:08:10,209 INFO  [sparkDriver-akka.actor.default-dispatcher-14] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_7 stored as values in memory (estimated size 1928.0 B, free 267.2 MB)
+2015-05-09 21:08:10,221 INFO  [sparkDriver-akka.actor.default-dispatcher-14] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1207) called with curMem=23870, maxMem=280248975
+2015-05-09 21:08:10,221 INFO  [sparkDriver-akka.actor.default-dispatcher-14] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_7_piece0 stored as bytes in memory (estimated size 1207.0 B, free 267.2 MB)
+2015-05-09 21:08:10,223 INFO  [sparkDriver-akka.actor.default-dispatcher-13] storage.BlockManagerInfo (Logging.scala:logInfo(59)) - Added broadcast_7_piece0 in memory on localhost:43394 (size: 1207.0 B, free: 267.3 MB)
+2015-05-09 21:08:10,224 INFO  [sparkDriver-akka.actor.default-dispatcher-14] storage.BlockManagerMaster (Logging.scala:logInfo(59)) - Updated info of block broadcast_7_piece0
+2015-05-09 21:08:10,225 INFO  [sparkDriver-akka.actor.default-dispatcher-14] spark.SparkContext (Logging.scala:logInfo(59)) - Created broadcast 7 from getCallSite at DStream.scala:294
+2015-05-09 21:08:10,264 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting 1 missing tasks from Stage 7 (KafkaRDD[7] at createDirectStream at App.java:51)
+2015-05-09 21:08:10,264 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Adding task set 7.0 with 1 tasks
+2015-05-09 21:08:10,282 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Starting task 0.0 in stage 7.0 (TID 7, localhost, ANY, 1289 bytes)
+2015-05-09 21:08:10,284 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Running task 0.0 in stage 7.0 (TID 7)
+2015-05-09 21:08:10,349 WARN  [Executor task launch worker-0] kafka.KafkaRDD (KafkaRDD.scala:compute(89)) - Beginning offset ${part.fromOffset} is the same as ending offset skipping topicTest 0
+2015-05-09 21:08:10,351 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 7.0 (TID 7). 649 bytes result sent to driver
+2015-05-09 21:08:10,377 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Stage 7 (foreach at App.java:82) finished in 0.084 s
+2015-05-09 21:08:10,380 INFO  [pool-5-thread-1] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Job 7 finished: foreach at App.java:82, took 0.193925 s
+RDD Count: 0
+2015-05-09 21:08:10,381 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Finished job streaming job 1431230890000 ms.0 from job set of time 1431230890000 ms
+2015-05-09 21:08:10,381 INFO  [sparkDriver-akka.actor.default-dispatcher-4] kafka.KafkaRDD (Logging.scala:logInfo(59)) - Removing RDD 6 from persistence list
+2015-05-09 21:08:10,383 INFO  [sparkDriver-akka.actor.default-dispatcher-16] storage.BlockManager (Logging.scala:logInfo(59)) - Removing RDD 6
+2015-05-09 21:08:10,386 INFO  [sparkDriver-akka.actor.default-dispatcher-4] scheduler.ReceivedBlockTracker (Logging.scala:logInfo(59)) - Deleting batches ArrayBuffer()
+2015-05-09 21:08:10,388 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Total delay: 0.381 s for time 1431230890000 ms (execution: 0.282 s)
+2015-05-09 21:08:10,400 INFO  [task-result-getter-3] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 7.0 (TID 7) in 112 ms on localhost (1/1)
+2015-05-09 21:08:10,400 INFO  [task-result-getter-3] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Removed TaskSet 7.0, whose tasks have all completed, from pool 
+2015-05-09 21:08:12,081 INFO  [sparkDriver-akka.actor.default-dispatcher-3] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Starting job streaming job 1431230892000 ms.0 from job set of time 1431230892000 ms
+2015-05-09 21:08:12,081 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Added jobs for time 1431230892000 ms
+2015-05-09 21:08:12,176 INFO  [pool-5-thread-1] spark.SparkContext (Logging.scala:logInfo(59)) - Starting job: foreach at App.java:82
+2015-05-09 21:08:12,180 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Got job 8 (foreach at App.java:82) with 1 output partitions (allowLocal=false)
+2015-05-09 21:08:12,180 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Final stage: Stage 8(foreach at App.java:82)
+2015-05-09 21:08:12,180 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Parents of final stage: List()
+2015-05-09 21:08:12,186 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Missing parents: List()
+2015-05-09 21:08:12,196 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting Stage 8 (KafkaRDD[8] at createDirectStream at App.java:51), which has no missing parents
+2015-05-09 21:08:12,200 INFO  [sparkDriver-akka.actor.default-dispatcher-14] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1928) called with curMem=25077, maxMem=280248975
+2015-05-09 21:08:12,202 INFO  [sparkDriver-akka.actor.default-dispatcher-14] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_8 stored as values in memory (estimated size 1928.0 B, free 267.2 MB)
+2015-05-09 21:08:12,274 INFO  [sparkDriver-akka.actor.default-dispatcher-14] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1207) called with curMem=27005, maxMem=280248975
+2015-05-09 21:08:12,277 INFO  [sparkDriver-akka.actor.default-dispatcher-14] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_8_piece0 stored as bytes in memory (estimated size 1207.0 B, free 267.2 MB)
+2015-05-09 21:08:12,288 INFO  [sparkDriver-akka.actor.default-dispatcher-3] storage.BlockManagerInfo (Logging.scala:logInfo(59)) - Added broadcast_8_piece0 in memory on localhost:43394 (size: 1207.0 B, free: 267.3 MB)
+2015-05-09 21:08:12,290 INFO  [sparkDriver-akka.actor.default-dispatcher-14] storage.BlockManagerMaster (Logging.scala:logInfo(59)) - Updated info of block broadcast_8_piece0
+2015-05-09 21:08:12,369 INFO  [sparkDriver-akka.actor.default-dispatcher-14] spark.SparkContext (Logging.scala:logInfo(59)) - Created broadcast 8 from getCallSite at DStream.scala:294
+2015-05-09 21:08:12,394 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting 1 missing tasks from Stage 8 (KafkaRDD[8] at createDirectStream at App.java:51)
+2015-05-09 21:08:12,394 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Adding task set 8.0 with 1 tasks
+2015-05-09 21:08:12,398 INFO  [sparkDriver-akka.actor.default-dispatcher-3] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Starting task 0.0 in stage 8.0 (TID 8, localhost, ANY, 1289 bytes)
+2015-05-09 21:08:12,399 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Running task 0.0 in stage 8.0 (TID 8)
+2015-05-09 21:08:12,451 WARN  [Executor task launch worker-0] kafka.KafkaRDD (KafkaRDD.scala:compute(89)) - Beginning offset ${part.fromOffset} is the same as ending offset skipping topicTest 0
+2015-05-09 21:08:12,453 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 8.0 (TID 8). 649 bytes result sent to driver
+2015-05-09 21:08:12,494 INFO  [task-result-getter-0] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 8.0 (TID 8) in 98 ms on localhost (1/1)
+2015-05-09 21:08:12,494 INFO  [task-result-getter-0] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Removed TaskSet 8.0, whose tasks have all completed, from pool 
+2015-05-09 21:08:12,497 INFO  [sparkDriver-akka.actor.default-dispatcher-3] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Stage 8 (foreach at App.java:82) finished in 0.092 s
+2015-05-09 21:08:12,500 INFO  [pool-5-thread-1] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Job 8 finished: foreach at App.java:82, took 0.322365 s
+RDD Count: 0
+2015-05-09 21:08:12,504 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Finished job streaming job 1431230892000 ms.0 from job set of time 1431230892000 ms
+2015-05-09 21:08:12,505 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Total delay: 0.504 s for time 1431230892000 ms (execution: 0.423 s)
+2015-05-09 21:08:12,509 INFO  [sparkDriver-akka.actor.default-dispatcher-15] kafka.KafkaRDD (Logging.scala:logInfo(59)) - Removing RDD 7 from persistence list
+2015-05-09 21:08:12,512 INFO  [sparkDriver-akka.actor.default-dispatcher-13] storage.BlockManager (Logging.scala:logInfo(59)) - Removing RDD 7
+2015-05-09 21:08:12,516 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.ReceivedBlockTracker (Logging.scala:logInfo(59)) - Deleting batches ArrayBuffer()
+2015-05-09 21:08:14,064 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Starting job streaming job 1431230894000 ms.0 from job set of time 1431230894000 ms
+2015-05-09 21:08:14,065 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Added jobs for time 1431230894000 ms
+2015-05-09 21:08:14,082 INFO  [pool-5-thread-1] spark.SparkContext (Logging.scala:logInfo(59)) - Starting job: foreach at App.java:82
+2015-05-09 21:08:14,083 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Got job 9 (foreach at App.java:82) with 1 output partitions (allowLocal=false)
+2015-05-09 21:08:14,083 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Final stage: Stage 9(foreach at App.java:82)
+2015-05-09 21:08:14,083 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Parents of final stage: List()
+2015-05-09 21:08:14,083 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Missing parents: List()
+2015-05-09 21:08:14,086 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting Stage 9 (KafkaRDD[9] at createDirectStream at App.java:51), which has no missing parents
+2015-05-09 21:08:14,090 INFO  [sparkDriver-akka.actor.default-dispatcher-15] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1928) called with curMem=28212, maxMem=280248975
+2015-05-09 21:08:14,099 INFO  [sparkDriver-akka.actor.default-dispatcher-15] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_9 stored as values in memory (estimated size 1928.0 B, free 267.2 MB)
+2015-05-09 21:08:14,133 INFO  [sparkDriver-akka.actor.default-dispatcher-15] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1207) called with curMem=30140, maxMem=280248975
+2015-05-09 21:08:14,137 INFO  [sparkDriver-akka.actor.default-dispatcher-15] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_9_piece0 stored as bytes in memory (estimated size 1207.0 B, free 267.2 MB)
+2015-05-09 21:08:14,142 INFO  [sparkDriver-akka.actor.default-dispatcher-2] storage.BlockManagerInfo (Logging.scala:logInfo(59)) - Added broadcast_9_piece0 in memory on localhost:43394 (size: 1207.0 B, free: 267.3 MB)
+2015-05-09 21:08:14,143 INFO  [sparkDriver-akka.actor.default-dispatcher-15] storage.BlockManagerMaster (Logging.scala:logInfo(59)) - Updated info of block broadcast_9_piece0
+2015-05-09 21:08:14,144 INFO  [sparkDriver-akka.actor.default-dispatcher-15] spark.SparkContext (Logging.scala:logInfo(59)) - Created broadcast 9 from getCallSite at DStream.scala:294
+2015-05-09 21:08:14,148 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting 1 missing tasks from Stage 9 (KafkaRDD[9] at createDirectStream at App.java:51)
+2015-05-09 21:08:14,148 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Adding task set 9.0 with 1 tasks
+2015-05-09 21:08:14,149 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Starting task 0.0 in stage 9.0 (TID 9, localhost, ANY, 1289 bytes)
+2015-05-09 21:08:14,149 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Running task 0.0 in stage 9.0 (TID 9)
+2015-05-09 21:08:14,154 WARN  [Executor task launch worker-0] kafka.KafkaRDD (KafkaRDD.scala:compute(89)) - Beginning offset ${part.fromOffset} is the same as ending offset skipping topicTest 0
+2015-05-09 21:08:14,157 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 9.0 (TID 9). 649 bytes result sent to driver
+2015-05-09 21:08:14,162 INFO  [task-result-getter-1] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 9.0 (TID 9) in 12 ms on localhost (1/1)
+2015-05-09 21:08:14,163 INFO  [task-result-getter-1] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Removed TaskSet 9.0, whose tasks have all completed, from pool 
+2015-05-09 21:08:14,167 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Stage 9 (foreach at App.java:82) finished in 0.002 s
+2015-05-09 21:08:14,169 INFO  [pool-5-thread-1] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Job 9 finished: foreach at App.java:82, took 0.086040 s
+RDD Count: 0
+2015-05-09 21:08:14,172 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Finished job streaming job 1431230894000 ms.0 from job set of time 1431230894000 ms
+2015-05-09 21:08:14,175 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Total delay: 0.172 s for time 1431230894000 ms (execution: 0.108 s)
+2015-05-09 21:08:14,175 INFO  [sparkDriver-akka.actor.default-dispatcher-5] kafka.KafkaRDD (Logging.scala:logInfo(59)) - Removing RDD 8 from persistence list
+2015-05-09 21:08:14,175 INFO  [sparkDriver-akka.actor.default-dispatcher-16] storage.BlockManager (Logging.scala:logInfo(59)) - Removing RDD 8
+2015-05-09 21:08:14,175 INFO  [sparkDriver-akka.actor.default-dispatcher-5] scheduler.ReceivedBlockTracker (Logging.scala:logInfo(59)) - Deleting batches ArrayBuffer()
+2015-05-09 21:08:16,037 INFO  [sparkDriver-akka.actor.default-dispatcher-4] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Added jobs for time 1431230896000 ms
+2015-05-09 21:08:16,058 INFO  [sparkDriver-akka.actor.default-dispatcher-4] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Starting job streaming job 1431230896000 ms.0 from job set of time 1431230896000 ms
+2015-05-09 21:08:16,089 INFO  [pool-5-thread-1] spark.SparkContext (Logging.scala:logInfo(59)) - Starting job: foreach at App.java:82
+2015-05-09 21:08:16,092 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Got job 10 (foreach at App.java:82) with 1 output partitions (allowLocal=false)
+2015-05-09 21:08:16,093 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Final stage: Stage 10(foreach at App.java:82)
+2015-05-09 21:08:16,093 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Parents of final stage: List()
+2015-05-09 21:08:16,095 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Missing parents: List()
+2015-05-09 21:08:16,098 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting Stage 10 (KafkaRDD[10] at createDirectStream at App.java:51), which has no missing parents
+2015-05-09 21:08:16,120 INFO  [sparkDriver-akka.actor.default-dispatcher-2] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1928) called with curMem=31347, maxMem=280248975
+2015-05-09 21:08:16,120 INFO  [sparkDriver-akka.actor.default-dispatcher-2] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_10 stored as values in memory (estimated size 1928.0 B, free 267.2 MB)
+2015-05-09 21:08:16,230 INFO  [sparkDriver-akka.actor.default-dispatcher-2] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1207) called with curMem=33275, maxMem=280248975
+2015-05-09 21:08:16,236 INFO  [sparkDriver-akka.actor.default-dispatcher-2] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_10_piece0 stored as bytes in memory (estimated size 1207.0 B, free 267.2 MB)
+2015-05-09 21:08:16,240 INFO  [sparkDriver-akka.actor.default-dispatcher-13] storage.BlockManagerInfo (Logging.scala:logInfo(59)) - Added broadcast_10_piece0 in memory on localhost:43394 (size: 1207.0 B, free: 267.3 MB)
+2015-05-09 21:08:16,242 INFO  [sparkDriver-akka.actor.default-dispatcher-2] storage.BlockManagerMaster (Logging.scala:logInfo(59)) - Updated info of block broadcast_10_piece0
+2015-05-09 21:08:16,242 INFO  [sparkDriver-akka.actor.default-dispatcher-2] spark.SparkContext (Logging.scala:logInfo(59)) - Created broadcast 10 from getCallSite at DStream.scala:294
+2015-05-09 21:08:16,245 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting 1 missing tasks from Stage 10 (KafkaRDD[10] at createDirectStream at App.java:51)
+2015-05-09 21:08:16,246 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Adding task set 10.0 with 1 tasks
+2015-05-09 21:08:16,248 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Starting task 0.0 in stage 10.0 (TID 10, localhost, ANY, 1289 bytes)
+2015-05-09 21:08:16,248 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Running task 0.0 in stage 10.0 (TID 10)
+2015-05-09 21:08:16,253 WARN  [Executor task launch worker-0] kafka.KafkaRDD (KafkaRDD.scala:compute(89)) - Beginning offset ${part.fromOffset} is the same as ending offset skipping topicTest 0
+2015-05-09 21:08:16,258 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 10.0 (TID 10). 649 bytes result sent to driver
+2015-05-09 21:08:16,267 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Stage 10 (foreach at App.java:82) finished in 0.014 s
+2015-05-09 21:08:16,270 INFO  [pool-5-thread-1] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Job 10 finished: foreach at App.java:82, took 0.180103 s
+RDD Count: 0
+2015-05-09 21:08:16,277 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Finished job streaming job 1431230896000 ms.0 from job set of time 1431230896000 ms
+2015-05-09 21:08:16,277 INFO  [sparkDriver-akka.actor.default-dispatcher-5] kafka.KafkaRDD (Logging.scala:logInfo(59)) - Removing RDD 9 from persistence list
+2015-05-09 21:08:16,282 INFO  [sparkDriver-akka.actor.default-dispatcher-15] storage.BlockManager (Logging.scala:logInfo(59)) - Removing RDD 9
+2015-05-09 21:08:16,283 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Total delay: 0.277 s for time 1431230896000 ms (execution: 0.219 s)
+2015-05-09 21:08:16,287 INFO  [sparkDriver-akka.actor.default-dispatcher-5] scheduler.ReceivedBlockTracker (Logging.scala:logInfo(59)) - Deleting batches ArrayBuffer()
+2015-05-09 21:08:16,290 INFO  [task-result-getter-2] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 10.0 (TID 10) in 16 ms on localhost (1/1)
+2015-05-09 21:08:16,291 INFO  [task-result-getter-2] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Removed TaskSet 10.0, whose tasks have all completed, from pool 
+2015-05-09 21:08:18,062 INFO  [sparkDriver-akka.actor.default-dispatcher-5] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Starting job streaming job 1431230898000 ms.0 from job set of time 1431230898000 ms
+2015-05-09 21:08:18,062 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Added jobs for time 1431230898000 ms
+2015-05-09 21:08:18,081 INFO  [pool-5-thread-1] spark.SparkContext (Logging.scala:logInfo(59)) - Starting job: foreach at App.java:82
+2015-05-09 21:08:18,081 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Got job 11 (foreach at App.java:82) with 1 output partitions (allowLocal=false)
+2015-05-09 21:08:18,081 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Final stage: Stage 11(foreach at App.java:82)
+2015-05-09 21:08:18,082 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Parents of final stage: List()
+2015-05-09 21:08:18,090 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Missing parents: List()
+2015-05-09 21:08:18,094 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting Stage 11 (KafkaRDD[11] at createDirectStream at App.java:51), which has no missing parents
+2015-05-09 21:08:18,101 INFO  [sparkDriver-akka.actor.default-dispatcher-15] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1928) called with curMem=34482, maxMem=280248975
+2015-05-09 21:08:18,101 INFO  [sparkDriver-akka.actor.default-dispatcher-15] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_11 stored as values in memory (estimated size 1928.0 B, free 267.2 MB)
+2015-05-09 21:08:18,137 INFO  [sparkDriver-akka.actor.default-dispatcher-15] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1207) called with curMem=36410, maxMem=280248975
+2015-05-09 21:08:18,140 INFO  [sparkDriver-akka.actor.default-dispatcher-15] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_11_piece0 stored as bytes in memory (estimated size 1207.0 B, free 267.2 MB)
+2015-05-09 21:08:18,252 INFO  [sparkDriver-akka.actor.default-dispatcher-5] storage.BlockManagerInfo (Logging.scala:logInfo(59)) - Added broadcast_11_piece0 in memory on localhost:43394 (size: 1207.0 B, free: 267.3 MB)
+2015-05-09 21:08:18,252 INFO  [sparkDriver-akka.actor.default-dispatcher-15] storage.BlockManagerMaster (Logging.scala:logInfo(59)) - Updated info of block broadcast_11_piece0
+2015-05-09 21:08:18,252 INFO  [sparkDriver-akka.actor.default-dispatcher-15] spark.SparkContext (Logging.scala:logInfo(59)) - Created broadcast 11 from getCallSite at DStream.scala:294
+2015-05-09 21:08:18,252 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting 1 missing tasks from Stage 11 (KafkaRDD[11] at createDirectStream at App.java:51)
+2015-05-09 21:08:18,252 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Adding task set 11.0 with 1 tasks
+2015-05-09 21:08:18,255 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Starting task 0.0 in stage 11.0 (TID 11, localhost, ANY, 1289 bytes)
+2015-05-09 21:08:18,258 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Running task 0.0 in stage 11.0 (TID 11)
+2015-05-09 21:08:18,271 WARN  [Executor task launch worker-0] kafka.KafkaRDD (KafkaRDD.scala:compute(89)) - Beginning offset ${part.fromOffset} is the same as ending offset skipping topicTest 0
+2015-05-09 21:08:18,272 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 11.0 (TID 11). 649 bytes result sent to driver
+2015-05-09 21:08:18,276 INFO  [task-result-getter-3] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 11.0 (TID 11) in 21 ms on localhost (1/1)
+2015-05-09 21:08:18,277 INFO  [task-result-getter-3] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Removed TaskSet 11.0, whose tasks have all completed, from pool 
+2015-05-09 21:08:18,278 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Stage 11 (foreach at App.java:82) finished in 0.026 s
+2015-05-09 21:08:18,279 INFO  [pool-5-thread-1] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Job 11 finished: foreach at App.java:82, took 0.196924 s
+RDD Count: 0
+2015-05-09 21:08:18,280 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Finished job streaming job 1431230898000 ms.0 from job set of time 1431230898000 ms
+2015-05-09 21:08:18,284 INFO  [sparkDriver-akka.actor.default-dispatcher-3] kafka.KafkaRDD (Logging.scala:logInfo(59)) - Removing RDD 10 from persistence list
+2015-05-09 21:08:18,285 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Total delay: 0.279 s for time 1431230898000 ms (execution: 0.217 s)
+2015-05-09 21:08:18,287 INFO  [sparkDriver-akka.actor.default-dispatcher-16] storage.BlockManager (Logging.scala:logInfo(59)) - Removing RDD 10
+2015-05-09 21:08:18,292 INFO  [sparkDriver-akka.actor.default-dispatcher-3] scheduler.ReceivedBlockTracker (Logging.scala:logInfo(59)) - Deleting batches ArrayBuffer()
+2015-05-09 21:08:20,039 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Starting job streaming job 1431230900000 ms.0 from job set of time 1431230900000 ms
+2015-05-09 21:08:20,039 INFO  [sparkDriver-akka.actor.default-dispatcher-4] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Added jobs for time 1431230900000 ms
+2015-05-09 21:08:20,166 INFO  [pool-5-thread-1] spark.SparkContext (Logging.scala:logInfo(59)) - Starting job: foreach at App.java:82
+2015-05-09 21:08:20,173 INFO  [sparkDriver-akka.actor.default-dispatcher-4] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Got job 12 (foreach at App.java:82) with 1 output partitions (allowLocal=false)
+2015-05-09 21:08:20,173 INFO  [sparkDriver-akka.actor.default-dispatcher-4] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Final stage: Stage 12(foreach at App.java:82)
+2015-05-09 21:08:20,173 INFO  [sparkDriver-akka.actor.default-dispatcher-4] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Parents of final stage: List()
+2015-05-09 21:08:20,175 INFO  [sparkDriver-akka.actor.default-dispatcher-4] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Missing parents: List()
+2015-05-09 21:08:20,179 INFO  [sparkDriver-akka.actor.default-dispatcher-4] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting Stage 12 (KafkaRDD[12] at createDirectStream at App.java:51), which has no missing parents
+2015-05-09 21:08:20,186 INFO  [sparkDriver-akka.actor.default-dispatcher-4] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1928) called with curMem=37617, maxMem=280248975
+2015-05-09 21:08:20,189 INFO  [sparkDriver-akka.actor.default-dispatcher-4] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_12 stored as values in memory (estimated size 1928.0 B, free 267.2 MB)
+2015-05-09 21:08:20,548 INFO  [sparkDriver-akka.actor.default-dispatcher-4] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1207) called with curMem=39545, maxMem=280248975
+2015-05-09 21:08:20,754 INFO  [sparkDriver-akka.actor.default-dispatcher-4] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_12_piece0 stored as bytes in memory (estimated size 1207.0 B, free 267.2 MB)
+2015-05-09 21:08:20,780 INFO  [sparkDriver-akka.actor.default-dispatcher-14] storage.BlockManagerInfo (Logging.scala:logInfo(59)) - Added broadcast_12_piece0 in memory on localhost:43394 (size: 1207.0 B, free: 267.3 MB)
+2015-05-09 21:08:20,780 INFO  [sparkDriver-akka.actor.default-dispatcher-4] storage.BlockManagerMaster (Logging.scala:logInfo(59)) - Updated info of block broadcast_12_piece0
+2015-05-09 21:08:20,780 INFO  [sparkDriver-akka.actor.default-dispatcher-4] spark.SparkContext (Logging.scala:logInfo(59)) - Created broadcast 12 from getCallSite at DStream.scala:294
+2015-05-09 21:08:20,784 INFO  [sparkDriver-akka.actor.default-dispatcher-4] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting 1 missing tasks from Stage 12 (KafkaRDD[12] at createDirectStream at App.java:51)
+2015-05-09 21:08:20,784 INFO  [sparkDriver-akka.actor.default-dispatcher-4] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Adding task set 12.0 with 1 tasks
+2015-05-09 21:08:20,787 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Starting task 0.0 in stage 12.0 (TID 12, localhost, ANY, 1289 bytes)
+2015-05-09 21:08:20,787 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Running task 0.0 in stage 12.0 (TID 12)
+2015-05-09 21:08:20,800 WARN  [Executor task launch worker-0] kafka.KafkaRDD (KafkaRDD.scala:compute(89)) - Beginning offset ${part.fromOffset} is the same as ending offset skipping topicTest 0
+2015-05-09 21:08:20,825 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 12.0 (TID 12). 649 bytes result sent to driver
+2015-05-09 21:08:20,825 INFO  [task-result-getter-0] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 12.0 (TID 12) in 38 ms on localhost (1/1)
+2015-05-09 21:08:20,826 INFO  [task-result-getter-0] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Removed TaskSet 12.0, whose tasks have all completed, from pool 
+2015-05-09 21:08:20,837 INFO  [sparkDriver-akka.actor.default-dispatcher-4] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Stage 12 (foreach at App.java:82) finished in 0.046 s
+2015-05-09 21:08:20,840 INFO  [pool-5-thread-1] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Job 12 finished: foreach at App.java:82, took 0.669191 s
+RDD Count: 0
+2015-05-09 21:08:20,845 INFO  [sparkDriver-akka.actor.default-dispatcher-4] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Finished job streaming job 1431230900000 ms.0 from job set of time 1431230900000 ms
+2015-05-09 21:08:20,847 INFO  [sparkDriver-akka.actor.default-dispatcher-4] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Total delay: 0.845 s for time 1431230900000 ms (execution: 0.806 s)
+2015-05-09 21:08:20,849 INFO  [sparkDriver-akka.actor.default-dispatcher-4] kafka.KafkaRDD (Logging.scala:logInfo(59)) - Removing RDD 11 from persistence list
+2015-05-09 21:08:20,853 INFO  [sparkDriver-akka.actor.default-dispatcher-14] storage.BlockManager (Logging.scala:logInfo(59)) - Removing RDD 11
+2015-05-09 21:08:20,854 INFO  [sparkDriver-akka.actor.default-dispatcher-4] scheduler.ReceivedBlockTracker (Logging.scala:logInfo(59)) - Deleting batches ArrayBuffer()
+2015-05-09 21:08:22,067 INFO  [pool-5-thread-1] spark.SparkContext (Logging.scala:logInfo(59)) - Starting job: foreach at App.java:82
+2015-05-09 21:08:22,069 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Starting job streaming job 1431230902000 ms.0 from job set of time 1431230902000 ms
+2015-05-09 21:08:22,069 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Added jobs for time 1431230902000 ms
+2015-05-09 21:08:22,158 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Got job 13 (foreach at App.java:82) with 1 output partitions (allowLocal=false)
+2015-05-09 21:08:22,159 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Final stage: Stage 13(foreach at App.java:82)
+2015-05-09 21:08:22,159 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Parents of final stage: List()
+2015-05-09 21:08:22,181 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Missing parents: List()
+2015-05-09 21:08:22,182 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting Stage 13 (KafkaRDD[13] at createDirectStream at App.java:51), which has no missing parents
+2015-05-09 21:08:22,182 INFO  [sparkDriver-akka.actor.default-dispatcher-2] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1928) called with curMem=40752, maxMem=280248975
+2015-05-09 21:08:22,182 INFO  [sparkDriver-akka.actor.default-dispatcher-2] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_13 stored as values in memory (estimated size 1928.0 B, free 267.2 MB)
+2015-05-09 21:08:22,303 INFO  [sparkDriver-akka.actor.default-dispatcher-2] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1207) called with curMem=42680, maxMem=280248975
+2015-05-09 21:08:22,308 INFO  [sparkDriver-akka.actor.default-dispatcher-2] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_13_piece0 stored as bytes in memory (estimated size 1207.0 B, free 267.2 MB)
+2015-05-09 21:08:22,308 INFO  [sparkDriver-akka.actor.default-dispatcher-13] storage.BlockManagerInfo (Logging.scala:logInfo(59)) - Added broadcast_13_piece0 in memory on localhost:43394 (size: 1207.0 B, free: 267.3 MB)
+2015-05-09 21:08:22,308 INFO  [sparkDriver-akka.actor.default-dispatcher-2] storage.BlockManagerMaster (Logging.scala:logInfo(59)) - Updated info of block broadcast_13_piece0
+2015-05-09 21:08:22,309 INFO  [sparkDriver-akka.actor.default-dispatcher-2] spark.SparkContext (Logging.scala:logInfo(59)) - Created broadcast 13 from getCallSite at DStream.scala:294
+2015-05-09 21:08:22,311 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting 1 missing tasks from Stage 13 (KafkaRDD[13] at createDirectStream at App.java:51)
+2015-05-09 21:08:22,312 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Adding task set 13.0 with 1 tasks
+2015-05-09 21:08:22,324 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Starting task 0.0 in stage 13.0 (TID 13, localhost, ANY, 1289 bytes)
+2015-05-09 21:08:22,335 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Running task 0.0 in stage 13.0 (TID 13)
+2015-05-09 21:08:22,433 WARN  [Executor task launch worker-0] kafka.KafkaRDD (KafkaRDD.scala:compute(89)) - Beginning offset ${part.fromOffset} is the same as ending offset skipping topicTest 0
+2015-05-09 21:08:22,438 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 13.0 (TID 13). 649 bytes result sent to driver
+2015-05-09 21:08:22,444 INFO  [task-result-getter-1] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 13.0 (TID 13) in 120 ms on localhost (1/1)
+2015-05-09 21:08:22,445 INFO  [task-result-getter-1] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Removed TaskSet 13.0, whose tasks have all completed, from pool 
+2015-05-09 21:08:22,446 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Stage 13 (foreach at App.java:82) finished in 0.118 s
+2015-05-09 21:08:22,447 INFO  [pool-5-thread-1] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Job 13 finished: foreach at App.java:82, took 0.290891 s
+RDD Count: 0
+2015-05-09 21:08:22,447 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Finished job streaming job 1431230902000 ms.0 from job set of time 1431230902000 ms
+2015-05-09 21:08:22,447 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Total delay: 0.447 s for time 1431230902000 ms (execution: 0.378 s)
+2015-05-09 21:08:22,447 INFO  [sparkDriver-akka.actor.default-dispatcher-2] kafka.KafkaRDD (Logging.scala:logInfo(59)) - Removing RDD 12 from persistence list
+2015-05-09 21:08:22,450 INFO  [sparkDriver-akka.actor.default-dispatcher-13] storage.BlockManager (Logging.scala:logInfo(59)) - Removing RDD 12
+2015-05-09 21:08:22,454 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.ReceivedBlockTracker (Logging.scala:logInfo(59)) - Deleting batches ArrayBuffer()
+2015-05-09 21:08:24,046 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Starting job streaming job 1431230904000 ms.0 from job set of time 1431230904000 ms
+2015-05-09 21:08:24,047 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Added jobs for time 1431230904000 ms
+2015-05-09 21:08:24,075 INFO  [pool-5-thread-1] spark.SparkContext (Logging.scala:logInfo(59)) - Starting job: foreach at App.java:82
+2015-05-09 21:08:24,075 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Got job 14 (foreach at App.java:82) with 1 output partitions (allowLocal=false)
+2015-05-09 21:08:24,076 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Final stage: Stage 14(foreach at App.java:82)
+2015-05-09 21:08:24,077 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Parents of final stage: List()
+2015-05-09 21:08:24,081 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Missing parents: List()
+2015-05-09 21:08:24,084 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting Stage 14 (KafkaRDD[14] at createDirectStream at App.java:51), which has no missing parents
+2015-05-09 21:08:24,116 INFO  [sparkDriver-akka.actor.default-dispatcher-15] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1928) called with curMem=43887, maxMem=280248975
+2015-05-09 21:08:24,119 INFO  [sparkDriver-akka.actor.default-dispatcher-15] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_14 stored as values in memory (estimated size 1928.0 B, free 267.2 MB)
+2015-05-09 21:08:24,267 INFO  [sparkDriver-akka.actor.default-dispatcher-15] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1207) called with curMem=45815, maxMem=280248975
+2015-05-09 21:08:24,278 INFO  [sparkDriver-akka.actor.default-dispatcher-15] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_14_piece0 stored as bytes in memory (estimated size 1207.0 B, free 267.2 MB)
+2015-05-09 21:08:24,287 INFO  [sparkDriver-akka.actor.default-dispatcher-16] storage.BlockManagerInfo (Logging.scala:logInfo(59)) - Added broadcast_14_piece0 in memory on localhost:43394 (size: 1207.0 B, free: 267.2 MB)
+2015-05-09 21:08:24,289 INFO  [sparkDriver-akka.actor.default-dispatcher-15] storage.BlockManagerMaster (Logging.scala:logInfo(59)) - Updated info of block broadcast_14_piece0
+2015-05-09 21:08:24,289 INFO  [sparkDriver-akka.actor.default-dispatcher-15] spark.SparkContext (Logging.scala:logInfo(59)) - Created broadcast 14 from getCallSite at DStream.scala:294
+2015-05-09 21:08:24,293 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting 1 missing tasks from Stage 14 (KafkaRDD[14] at createDirectStream at App.java:51)
+2015-05-09 21:08:24,294 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Adding task set 14.0 with 1 tasks
+2015-05-09 21:08:24,306 INFO  [sparkDriver-akka.actor.default-dispatcher-16] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Starting task 0.0 in stage 14.0 (TID 14, localhost, ANY, 1289 bytes)
+2015-05-09 21:08:24,306 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Running task 0.0 in stage 14.0 (TID 14)
+2015-05-09 21:08:24,326 WARN  [Executor task launch worker-0] kafka.KafkaRDD (KafkaRDD.scala:compute(89)) - Beginning offset ${part.fromOffset} is the same as ending offset skipping topicTest 0
+2015-05-09 21:08:24,363 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 14.0 (TID 14). 649 bytes result sent to driver
+2015-05-09 21:08:24,431 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Stage 14 (foreach at App.java:82) finished in 0.125 s
+2015-05-09 21:08:24,434 INFO  [pool-5-thread-1] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Job 14 finished: foreach at App.java:82, took 0.359433 s
+RDD Count: 0
+2015-05-09 21:08:24,436 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Finished job streaming job 1431230904000 ms.0 from job set of time 1431230904000 ms
+2015-05-09 21:08:24,437 INFO  [sparkDriver-akka.actor.default-dispatcher-16] kafka.KafkaRDD (Logging.scala:logInfo(59)) - Removing RDD 13 from persistence list
+2015-05-09 21:08:24,437 INFO  [sparkDriver-akka.actor.default-dispatcher-15] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Total delay: 0.435 s for time 1431230904000 ms (execution: 0.389 s)
+2015-05-09 21:08:24,439 INFO  [sparkDriver-akka.actor.default-dispatcher-3] storage.BlockManager (Logging.scala:logInfo(59)) - Removing RDD 13
+2015-05-09 21:08:24,443 INFO  [sparkDriver-akka.actor.default-dispatcher-16] scheduler.ReceivedBlockTracker (Logging.scala:logInfo(59)) - Deleting batches ArrayBuffer()
+2015-05-09 21:08:24,446 INFO  [task-result-getter-2] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 14.0 (TID 14) in 126 ms on localhost (1/1)
+2015-05-09 21:08:24,447 INFO  [task-result-getter-2] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Removed TaskSet 14.0, whose tasks have all completed, from pool 
+2015-05-09 21:08:26,032 INFO  [sparkDriver-akka.actor.default-dispatcher-16] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Starting job streaming job 1431230906000 ms.0 from job set of time 1431230906000 ms
+2015-05-09 21:08:26,032 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Added jobs for time 1431230906000 ms
+2015-05-09 21:08:26,085 INFO  [pool-5-thread-1] spark.SparkContext (Logging.scala:logInfo(59)) - Starting job: foreach at App.java:82
+2015-05-09 21:08:26,086 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Got job 15 (foreach at App.java:82) with 1 output partitions (allowLocal=false)
+2015-05-09 21:08:26,086 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Final stage: Stage 15(foreach at App.java:82)
+2015-05-09 21:08:26,103 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Parents of final stage: List()
+2015-05-09 21:08:26,103 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Missing parents: List()
+2015-05-09 21:08:26,103 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting Stage 15 (KafkaRDD[15] at createDirectStream at App.java:51), which has no missing parents
+2015-05-09 21:08:26,109 INFO  [sparkDriver-akka.actor.default-dispatcher-14] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1928) called with curMem=47022, maxMem=280248975
+2015-05-09 21:08:26,111 INFO  [sparkDriver-akka.actor.default-dispatcher-14] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_15 stored as values in memory (estimated size 1928.0 B, free 267.2 MB)
+2015-05-09 21:08:26,193 INFO  [sparkDriver-akka.actor.default-dispatcher-14] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1207) called with curMem=48950, maxMem=280248975
+2015-05-09 21:08:26,197 INFO  [sparkDriver-akka.actor.default-dispatcher-14] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_15_piece0 stored as bytes in memory (estimated size 1207.0 B, free 267.2 MB)
+2015-05-09 21:08:26,230 INFO  [sparkDriver-akka.actor.default-dispatcher-16] storage.BlockManagerInfo (Logging.scala:logInfo(59)) - Added broadcast_15_piece0 in memory on localhost:43394 (size: 1207.0 B, free: 267.2 MB)
+2015-05-09 21:08:26,254 INFO  [sparkDriver-akka.actor.default-dispatcher-14] storage.BlockManagerMaster (Logging.scala:logInfo(59)) - Updated info of block broadcast_15_piece0
+2015-05-09 21:08:26,255 INFO  [sparkDriver-akka.actor.default-dispatcher-14] spark.SparkContext (Logging.scala:logInfo(59)) - Created broadcast 15 from getCallSite at DStream.scala:294
+2015-05-09 21:08:26,258 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting 1 missing tasks from Stage 15 (KafkaRDD[15] at createDirectStream at App.java:51)
+2015-05-09 21:08:26,259 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Adding task set 15.0 with 1 tasks
+2015-05-09 21:08:26,308 INFO  [sparkDriver-akka.actor.default-dispatcher-16] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Starting task 0.0 in stage 15.0 (TID 15, localhost, ANY, 1289 bytes)
+2015-05-09 21:08:26,315 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Running task 0.0 in stage 15.0 (TID 15)
+2015-05-09 21:08:26,332 WARN  [Executor task launch worker-0] kafka.KafkaRDD (KafkaRDD.scala:compute(89)) - Beginning offset ${part.fromOffset} is the same as ending offset skipping topicTest 0
+2015-05-09 21:08:26,335 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 15.0 (TID 15). 649 bytes result sent to driver
+2015-05-09 21:08:26,360 INFO  [sparkDriver-akka.actor.default-dispatcher-16] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Stage 15 (foreach at App.java:82) finished in 0.098 s
+2015-05-09 21:08:26,361 INFO  [pool-5-thread-1] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Job 15 finished: foreach at App.java:82, took 0.274719 s
+RDD Count: 0
+2015-05-09 21:08:26,362 INFO  [sparkDriver-akka.actor.default-dispatcher-16] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Finished job streaming job 1431230906000 ms.0 from job set of time 1431230906000 ms
+2015-05-09 21:08:26,365 INFO  [sparkDriver-akka.actor.default-dispatcher-14] kafka.KafkaRDD (Logging.scala:logInfo(59)) - Removing RDD 14 from persistence list
+2015-05-09 21:08:26,365 INFO  [sparkDriver-akka.actor.default-dispatcher-16] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Total delay: 0.362 s for time 1431230906000 ms (execution: 0.330 s)
+2015-05-09 21:08:26,377 INFO  [sparkDriver-akka.actor.default-dispatcher-16] storage.BlockManager (Logging.scala:logInfo(59)) - Removing RDD 14
+2015-05-09 21:08:26,383 INFO  [task-result-getter-3] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 15.0 (TID 15) in 54 ms on localhost (1/1)
+2015-05-09 21:08:26,384 INFO  [task-result-getter-3] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Removed TaskSet 15.0, whose tasks have all completed, from pool 
+2015-05-09 21:08:26,405 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.ReceivedBlockTracker (Logging.scala:logInfo(59)) - Deleting batches ArrayBuffer()
+2015-05-09 21:08:28,077 INFO  [sparkDriver-akka.actor.default-dispatcher-4] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Starting job streaming job 1431230908000 ms.0 from job set of time 1431230908000 ms
+2015-05-09 21:08:28,091 INFO  [sparkDriver-akka.actor.default-dispatcher-16] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Added jobs for time 1431230908000 ms
+2015-05-09 21:08:28,106 INFO  [pool-5-thread-1] spark.SparkContext (Logging.scala:logInfo(59)) - Starting job: foreach at App.java:82
+2015-05-09 21:08:28,106 INFO  [sparkDriver-akka.actor.default-dispatcher-16] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Got job 16 (foreach at App.java:82) with 1 output partitions (allowLocal=false)
+2015-05-09 21:08:28,106 INFO  [sparkDriver-akka.actor.default-dispatcher-16] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Final stage: Stage 16(foreach at App.java:82)
+2015-05-09 21:08:28,106 INFO  [sparkDriver-akka.actor.default-dispatcher-16] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Parents of final stage: List()
+2015-05-09 21:08:28,109 INFO  [sparkDriver-akka.actor.default-dispatcher-16] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Missing parents: List()
+2015-05-09 21:08:28,113 INFO  [sparkDriver-akka.actor.default-dispatcher-16] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting Stage 16 (KafkaRDD[16] at createDirectStream at App.java:51), which has no missing parents
+2015-05-09 21:08:28,118 INFO  [sparkDriver-akka.actor.default-dispatcher-16] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1928) called with curMem=50157, maxMem=280248975
+2015-05-09 21:08:28,120 INFO  [sparkDriver-akka.actor.default-dispatcher-16] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_16 stored as values in memory (estimated size 1928.0 B, free 267.2 MB)
+2015-05-09 21:08:28,163 INFO  [sparkDriver-akka.actor.default-dispatcher-16] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1207) called with curMem=52085, maxMem=280248975
+2015-05-09 21:08:28,163 INFO  [sparkDriver-akka.actor.default-dispatcher-16] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_16_piece0 stored as bytes in memory (estimated size 1207.0 B, free 267.2 MB)
+2015-05-09 21:08:28,163 INFO  [sparkDriver-akka.actor.default-dispatcher-14] storage.BlockManagerInfo (Logging.scala:logInfo(59)) - Added broadcast_16_piece0 in memory on localhost:43394 (size: 1207.0 B, free: 267.2 MB)
+2015-05-09 21:08:28,163 INFO  [sparkDriver-akka.actor.default-dispatcher-16] storage.BlockManagerMaster (Logging.scala:logInfo(59)) - Updated info of block broadcast_16_piece0
+2015-05-09 21:08:28,163 INFO  [sparkDriver-akka.actor.default-dispatcher-16] spark.SparkContext (Logging.scala:logInfo(59)) - Created broadcast 16 from getCallSite at DStream.scala:294
+2015-05-09 21:08:28,163 INFO  [sparkDriver-akka.actor.default-dispatcher-16] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting 1 missing tasks from Stage 16 (KafkaRDD[16] at createDirectStream at App.java:51)
+2015-05-09 21:08:28,164 INFO  [sparkDriver-akka.actor.default-dispatcher-16] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Adding task set 16.0 with 1 tasks
+2015-05-09 21:08:28,168 INFO  [sparkDriver-akka.actor.default-dispatcher-14] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Starting task 0.0 in stage 16.0 (TID 16, localhost, ANY, 1289 bytes)
+2015-05-09 21:08:28,169 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Running task 0.0 in stage 16.0 (TID 16)
+2015-05-09 21:08:28,183 WARN  [Executor task launch worker-0] kafka.KafkaRDD (KafkaRDD.scala:compute(89)) - Beginning offset ${part.fromOffset} is the same as ending offset skipping topicTest 0
+2015-05-09 21:08:28,190 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 16.0 (TID 16). 649 bytes result sent to driver
+2015-05-09 21:08:28,193 INFO  [sparkDriver-akka.actor.default-dispatcher-16] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Stage 16 (foreach at App.java:82) finished in 0.020 s
+2015-05-09 21:08:28,195 INFO  [pool-5-thread-1] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Job 16 finished: foreach at App.java:82, took 0.088307 s
+RDD Count: 0
+2015-05-09 21:08:28,197 INFO  [sparkDriver-akka.actor.default-dispatcher-16] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Finished job streaming job 1431230908000 ms.0 from job set of time 1431230908000 ms
+2015-05-09 21:08:28,197 INFO  [sparkDriver-akka.actor.default-dispatcher-16] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Total delay: 0.196 s for time 1431230908000 ms (execution: 0.119 s)
+2015-05-09 21:08:28,198 INFO  [sparkDriver-akka.actor.default-dispatcher-16] kafka.KafkaRDD (Logging.scala:logInfo(59)) - Removing RDD 15 from persistence list
+2015-05-09 21:08:28,202 INFO  [sparkDriver-akka.actor.default-dispatcher-14] storage.BlockManager (Logging.scala:logInfo(59)) - Removing RDD 15
+2015-05-09 21:08:28,207 INFO  [sparkDriver-akka.actor.default-dispatcher-16] scheduler.ReceivedBlockTracker (Logging.scala:logInfo(59)) - Deleting batches ArrayBuffer()
+2015-05-09 21:08:28,209 INFO  [task-result-getter-0] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 16.0 (TID 16) in 26 ms on localhost (1/1)
+2015-05-09 21:08:28,210 INFO  [task-result-getter-0] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Removed TaskSet 16.0, whose tasks have all completed, from pool 
+2015-05-09 21:08:30,100 INFO  [sparkDriver-akka.actor.default-dispatcher-5] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Starting job streaming job 1431230910000 ms.0 from job set of time 1431230910000 ms
+2015-05-09 21:08:30,100 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Added jobs for time 1431230910000 ms
+2015-05-09 21:08:30,167 INFO  [pool-5-thread-1] spark.SparkContext (Logging.scala:logInfo(59)) - Starting job: foreach at App.java:82
+2015-05-09 21:08:30,172 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Got job 17 (foreach at App.java:82) with 1 output partitions (allowLocal=false)
+2015-05-09 21:08:30,172 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Final stage: Stage 17(foreach at App.java:82)
+2015-05-09 21:08:30,173 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Parents of final stage: List()
+2015-05-09 21:08:30,176 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Missing parents: List()
+2015-05-09 21:08:30,178 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting Stage 17 (KafkaRDD[17] at createDirectStream at App.java:51), which has no missing parents
+2015-05-09 21:08:30,218 INFO  [sparkDriver-akka.actor.default-dispatcher-13] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1928) called with curMem=53292, maxMem=280248975
+2015-05-09 21:08:30,270 INFO  [sparkDriver-akka.actor.default-dispatcher-13] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_17 stored as values in memory (estimated size 1928.0 B, free 267.2 MB)
+2015-05-09 21:08:30,294 INFO  [sparkDriver-akka.actor.default-dispatcher-13] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1207) called with curMem=55220, maxMem=280248975
+2015-05-09 21:08:30,296 INFO  [sparkDriver-akka.actor.default-dispatcher-13] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_17_piece0 stored as bytes in memory (estimated size 1207.0 B, free 267.2 MB)
+2015-05-09 21:08:30,339 INFO  [sparkDriver-akka.actor.default-dispatcher-3] storage.BlockManagerInfo (Logging.scala:logInfo(59)) - Added broadcast_17_piece0 in memory on localhost:43394 (size: 1207.0 B, free: 267.2 MB)
+2015-05-09 21:08:30,342 INFO  [sparkDriver-akka.actor.default-dispatcher-13] storage.BlockManagerMaster (Logging.scala:logInfo(59)) - Updated info of block broadcast_17_piece0
+2015-05-09 21:08:30,342 INFO  [sparkDriver-akka.actor.default-dispatcher-13] spark.SparkContext (Logging.scala:logInfo(59)) - Created broadcast 17 from getCallSite at DStream.scala:294
+2015-05-09 21:08:30,342 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting 1 missing tasks from Stage 17 (KafkaRDD[17] at createDirectStream at App.java:51)
+2015-05-09 21:08:30,342 INFO  [sparkDriver-akka.actor.default-dispatcher-13] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Adding task set 17.0 with 1 tasks
+2015-05-09 21:08:30,349 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Starting task 0.0 in stage 17.0 (TID 17, localhost, ANY, 1289 bytes)
+2015-05-09 21:08:30,351 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Running task 0.0 in stage 17.0 (TID 17)
+2015-05-09 21:08:30,365 WARN  [Executor task launch worker-0] kafka.KafkaRDD (KafkaRDD.scala:compute(89)) - Beginning offset ${part.fromOffset} is the same as ending offset skipping topicTest 0
+2015-05-09 21:08:30,369 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 17.0 (TID 17). 649 bytes result sent to driver
+2015-05-09 21:08:30,379 INFO  [sparkDriver-akka.actor.default-dispatcher-3] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Stage 17 (foreach at App.java:82) finished in 0.032 s
+2015-05-09 21:08:30,379 INFO  [pool-5-thread-1] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Job 17 finished: foreach at App.java:82, took 0.209907 s
+RDD Count: 0
+2015-05-09 21:08:30,379 INFO  [sparkDriver-akka.actor.default-dispatcher-3] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Finished job streaming job 1431230910000 ms.0 from job set of time 1431230910000 ms
+2015-05-09 21:08:30,381 INFO  [sparkDriver-akka.actor.default-dispatcher-3] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Total delay: 0.379 s for time 1431230910000 ms (execution: 0.279 s)
+2015-05-09 21:08:30,382 INFO  [sparkDriver-akka.actor.default-dispatcher-3] kafka.KafkaRDD (Logging.scala:logInfo(59)) - Removing RDD 16 from persistence list
+2015-05-09 21:08:30,385 INFO  [sparkDriver-akka.actor.default-dispatcher-2] storage.BlockManager (Logging.scala:logInfo(59)) - Removing RDD 16
+2015-05-09 21:08:30,386 INFO  [sparkDriver-akka.actor.default-dispatcher-3] scheduler.ReceivedBlockTracker (Logging.scala:logInfo(59)) - Deleting batches ArrayBuffer()
+2015-05-09 21:08:30,389 INFO  [task-result-getter-1] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 17.0 (TID 17) in 34 ms on localhost (1/1)
+2015-05-09 21:08:30,390 INFO  [task-result-getter-1] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Removed TaskSet 17.0, whose tasks have all completed, from pool 
+2015-05-09 21:08:32,038 INFO  [sparkDriver-akka.actor.default-dispatcher-3] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Starting job streaming job 1431230912000 ms.0 from job set of time 1431230912000 ms
+2015-05-09 21:08:32,061 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Added jobs for time 1431230912000 ms
+2015-05-09 21:08:32,077 INFO  [pool-5-thread-1] spark.SparkContext (Logging.scala:logInfo(59)) - Starting job: foreach at App.java:82
+2015-05-09 21:08:32,082 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Got job 18 (foreach at App.java:82) with 1 output partitions (allowLocal=false)
+2015-05-09 21:08:32,083 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Final stage: Stage 18(foreach at App.java:82)
+2015-05-09 21:08:32,084 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Parents of final stage: List()
+2015-05-09 21:08:32,093 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Missing parents: List()
+2015-05-09 21:08:32,094 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting Stage 18 (KafkaRDD[18] at createDirectStream at App.java:51), which has no missing parents
+2015-05-09 21:08:32,101 INFO  [sparkDriver-akka.actor.default-dispatcher-2] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1928) called with curMem=56427, maxMem=280248975
+2015-05-09 21:08:32,101 INFO  [sparkDriver-akka.actor.default-dispatcher-2] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_18 stored as values in memory (estimated size 1928.0 B, free 267.2 MB)
+2015-05-09 21:08:32,110 INFO  [sparkDriver-akka.actor.default-dispatcher-2] storage.MemoryStore (Logging.scala:logInfo(59)) - ensureFreeSpace(1207) called with curMem=58355, maxMem=280248975
+2015-05-09 21:08:32,113 INFO  [sparkDriver-akka.actor.default-dispatcher-2] storage.MemoryStore (Logging.scala:logInfo(59)) - Block broadcast_18_piece0 stored as bytes in memory (estimated size 1207.0 B, free 267.2 MB)
+2015-05-09 21:08:32,116 INFO  [sparkDriver-akka.actor.default-dispatcher-3] storage.BlockManagerInfo (Logging.scala:logInfo(59)) - Added broadcast_18_piece0 in memory on localhost:43394 (size: 1207.0 B, free: 267.2 MB)
+2015-05-09 21:08:32,117 INFO  [sparkDriver-akka.actor.default-dispatcher-2] storage.BlockManagerMaster (Logging.scala:logInfo(59)) - Updated info of block broadcast_18_piece0
+2015-05-09 21:08:32,118 INFO  [sparkDriver-akka.actor.default-dispatcher-2] spark.SparkContext (Logging.scala:logInfo(59)) - Created broadcast 18 from getCallSite at DStream.scala:294
+2015-05-09 21:08:32,120 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Submitting 1 missing tasks from Stage 18 (KafkaRDD[18] at createDirectStream at App.java:51)
+2015-05-09 21:08:32,121 INFO  [sparkDriver-akka.actor.default-dispatcher-2] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Adding task set 18.0 with 1 tasks
+2015-05-09 21:08:32,124 INFO  [sparkDriver-akka.actor.default-dispatcher-3] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Starting task 0.0 in stage 18.0 (TID 18, localhost, ANY, 1289 bytes)
+2015-05-09 21:08:32,124 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Running task 0.0 in stage 18.0 (TID 18)
+2015-05-09 21:08:32,174 WARN  [Executor task launch worker-0] kafka.KafkaRDD (KafkaRDD.scala:compute(89)) - Beginning offset ${part.fromOffset} is the same as ending offset skipping topicTest 0
+2015-05-09 21:08:32,177 INFO  [Executor task launch worker-0] executor.Executor (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 18.0 (TID 18). 649 bytes result sent to driver
+2015-05-09 21:08:32,206 INFO  [sparkDriver-akka.actor.default-dispatcher-3] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Stage 18 (foreach at App.java:82) finished in 0.082 s
+2015-05-09 21:08:32,207 INFO  [pool-5-thread-1] scheduler.DAGScheduler (Logging.scala:logInfo(59)) - Job 18 finished: foreach at App.java:82, took 0.128231 s
+RDD Count: 0
+2015-05-09 21:08:32,208 INFO  [sparkDriver-akka.actor.default-dispatcher-3] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Finished job streaming job 1431230912000 ms.0 from job set of time 1431230912000 ms
+2015-05-09 21:08:32,209 INFO  [sparkDriver-akka.actor.default-dispatcher-3] scheduler.JobScheduler (Logging.scala:logInfo(59)) - Total delay: 0.208 s for time 1431230912000 ms (execution: 0.170 s)
+2015-05-09 21:08:32,210 INFO  [sparkDriver-akka.actor.default-dispatcher-3] kafka.KafkaRDD (Logging.scala:logInfo(59)) - Removing RDD 17 from persistence list
+2015-05-09 21:08:32,214 INFO  [sparkDriver-akka.actor.default-dispatcher-2] storage.BlockManager (Logging.scala:logInfo(59)) - Removing RDD 17
+2015-05-09 21:08:32,215 INFO  [sparkDriver-akka.actor.default-dispatcher-3] scheduler.ReceivedBlockTracker (Logging.scala:logInfo(59)) - Deleting batches ArrayBuffer()
+2015-05-09 21:08:32,215 INFO  [task-result-getter-2] scheduler.TaskSetManager (Logging.scala:logInfo(59)) - Finished task 0.0 in stage 18.0 (TID 18) in 82 ms on localhost (1/1)
+2015-05-09 21:08:32,215 INFO  [task-result-getter-2] scheduler.TaskSchedulerImpl (Logging.scala:logInfo(59)) - Removed TaskSet 18.0, whose tasks have all completed, from pool 
