@@ -10,17 +10,17 @@ import kafka.message.MessageAndMetadata;
 import kafka.producer.KeyedMessage;
 import kafka.producer.ProducerConfig;
 
-import java.sql.Time;
 import java.util.*;
 import java.net.*;
 import java.io.*;
 
 public class App {
     public static void main(String[] args) throws IOException {
-
+        /*
         Thread consumerThread = new Thread(new PrintingConsumer());
         consumerThread.setName("Kafka Consumer Thread");
         consumerThread.start();
+        */
 
         Timer timer = new Timer();
         String url = "http://arn.data.fr24.com/zones/fcgi/full_all.js";
@@ -28,6 +28,7 @@ public class App {
         timer.schedule(fetchTask, 0,30);
     }
 
+    /*
     static class PrintingConsumer implements Runnable{
         @Override
         public void run(){
@@ -47,6 +48,7 @@ public class App {
 
         }
     }
+    */
 
     public static class URLFetchTask extends TimerTask {
 
