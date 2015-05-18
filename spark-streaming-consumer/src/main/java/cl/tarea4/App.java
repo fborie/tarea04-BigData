@@ -17,11 +17,13 @@ import org.apache.spark.streaming.api.java.JavaPairInputDStream;
 import org.apache.spark.streaming.api.java.JavaStreamingContext;
 import org.apache.spark.streaming.kafka.*;
 import redis.clients.jedis.Jedis;
+import redis.clients.util.SafeEncoder;
 import scala.Tuple2;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.regex.Pattern;
 
 public class App
@@ -53,36 +55,6 @@ public class App
         );
 
         /*
-        // Get the lines, split them into words, count the words and print
-        JavaDStream<String> lines = messages.map(new Function<Tuple2<String, String>, String>() {
-            @Override
-            public String call(Tuple2<String, String> tuple2) {
-                return tuple2._2();
-            }
-        });
-
-        JavaDStream<String> words = lines.flatMap(new FlatMapFunction<String, String>() {
-            @Override
-            public Iterable<String> call(String x) {
-                return Lists.newArrayList(SPACE.split(x));
-            }
-        });
-
-        JavaPairDStream<String, Integer> wordCounts = words.mapToPair(
-                new PairFunction<String, String, Integer>() {
-                    @Override
-                    public Tuple2<String, Integer> call(String s) {
-                        return new Tuple2<String, Integer>(s, 1);
-                    }
-                }).reduceByKey(
-                new Function2<Integer, Integer, Integer>() {
-                    @Override
-                    public Integer call(Integer i1, Integer i2) {
-                        return i1 + i2;
-                    }
-                });
-
-        */
 
         JavaPairDStream<String, String> latitude = messages.mapToPair(
                 new PairFunction<Tuple2<String, String>, String, String>() {
@@ -116,12 +88,14 @@ public class App
                     }
                 });
 
+        */
+
         JavaPairDStream<String, Integer> planeCount = messages.mapToPair(
                 new PairFunction<Tuple2<String, String>, String, Integer>() {
-                @Override
-                public Tuple2<String, Integer> call(Tuple2<String, String> flightInfo) {
-                    return new Tuple2<String, Integer>(flightInfo._2().split(" ")[4], 1);
-                }
+                    @Override
+                    public Tuple2<String, Integer> call(Tuple2<String, String> flightInfo) {
+                        return new Tuple2<String, Integer>(flightInfo._2().split(" ")[4], 1);
+                    }
                 }).reduceByKey(
                 new Function2<Integer, Integer, Integer>() {
                     @Override
@@ -130,6 +104,7 @@ public class App
                     }
                 });
 
+        /*
         //Saving to Jedis
         planeCount.foreachRDD(new Function<JavaPairRDD<String, Integer>, Void>() {
             public Void call(JavaPairRDD<String, Integer> rdd) {
@@ -140,8 +115,39 @@ public class App
                 return null;
             }
         });
+        */
 
-        //wordCounts.print();
+
+        JavaPairDStream<String, String> allInfo = messages.mapToPair(
+                new PairFunction<Tuple2<String, String>, String, String>() {
+                    @Override
+                    public Tuple2<String, String> call(Tuple2<String, String> s) {
+                        return new Tuple2<>(s._1(), s._2().split(" ")[0] + ":" + s._2().split(" ")[1]
+                                            +":"+ s._2().split(" ")[2]+":"+s._2().split(" ")[3]
+                                            +":"+ s._2().split(" ")[4]+":"+s._2().split(" ")[5]
+                                            +":"+ s._2().split(" ")[6]);
+                    }
+                });
+
+        allInfo.foreachRDD(new Function<JavaPairRDD<String, String>, Void>() {
+            public Void call(JavaPairRDD<String, String> rdd) {
+                Jedis jedis = new Jedis("localhost");
+                for (Tuple2<String, String> t: rdd.collect()) {
+                    Map<String, String> coordinateAsHash = new HashMap<String, String>();
+                    coordinateAsHash.put("latitude", t._2().split(":")[0]);
+                    coordinateAsHash.put("longitude", t._2().split(":")[1]);
+                    coordinateAsHash.put("altitude", t._2().split(":")[2]);
+                    coordinateAsHash.put("speed", t._2().split(":")[3]);
+                    coordinateAsHash.put("aircraftModel", t._2().split(":")[4]);
+                    coordinateAsHash.put("origin", t._2().split(":")[5]);
+                    coordinateAsHash.put("destination", t._2().split(":")[6]);
+                    jedis.hmset(t._1(), coordinateAsHash);
+                }
+                return null;
+            }
+        });
+
+        //allInfo.print();
         //latitude.print();
         planeCount.print();
         // Start the computation
