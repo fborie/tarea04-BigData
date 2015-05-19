@@ -1,0 +1,41 @@
+Made By:
+Francisco Borie
+Fabio Guarini
+
+Information:
+
+This Demo runs a Kafka-Producer which fetches data from 
+an url of flightradar24 to obtain data from the aircrafts
+
+This information is then saved in the kafka cluster and
+consumed by the Spark-Consumer. This information is processed
+on a simple manner and stored using RedisDB (specifically Jedis
+, which is 'Java-Redis'). Finally the information stored in 
+Redis is consumed with a Rails Application that displays 
+some information in a table and in googlemaps (position of a
+particular aircraft).
+
+System Information:
+*) This Demo was made using:
+     -Cloudera image 5.4.0 (VM)
+     -kafka_2.10-0.8.2.1
+     -Spark 1.3.0
+     -redis-3.0.1
+
+How To run
+0) As the proyects were made using Maven, first go to
+   kafka-producer folder and run 'mvn clean package'
+   (do the same at, spark-streaming-consumer)
+
+1) Run the redis server (sudo src/redis-server)
+2) Run the redis cli for queries (sudo src/redis-cli)
+3) Run the kafka-server sudo bin/kafka-server-start.sh config/server.properties
+3 - Note: You must have first created a topic with the name "testTopic" in order
+         to sucessfully store the data.
+4) Run Kafka-Producer: java -jar target/kafka-producer-1.0-SNAPSHOT-jar-with-dependencies.jar
+5) Run Spark-Consumer: spark-submit --master 'local[4]' --class cl.tarea4.App target/spark-streamingonsumer-1.0-SNAPSHOT-jar-with-dependencies.jar localhost:9092 testTopic
+(could use > file.dump if you just want to see prints for testing)
+6) After this, the data should be storing in Redis, you can Query it with 'KEYS *' to see all the
+   keys stored. Usefull commands -> FLUSHDB (eliminate all entries)
+                                 -> HGETALL {key} (gives you all the info stored with the matching key)
+7) Run the Rails application (go to localhost and see the magic :D hahaha)
