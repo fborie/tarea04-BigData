@@ -131,17 +131,17 @@ public class App
 
         allInfo.foreachRDD(new Function<JavaPairRDD<String, String>, Void>() {
             public Void call(JavaPairRDD<String, String> rdd) {
-                Jedis jedis = new Jedis("localhost:6379");
+                Jedis jedis = new Jedis("localhost");
                 for (Tuple2<String, String> t: rdd.collect()) {
-                    Map<String, String> coordinateAsHash = new HashMap<String, String>();
-                    coordinateAsHash.put("latitude", t._2().split(":")[0]);
-                    coordinateAsHash.put("longitude", t._2().split(":")[1]);
-                    coordinateAsHash.put("altitude", t._2().split(":")[2]);
-                    coordinateAsHash.put("speed", t._2().split(":")[3]);
-                    coordinateAsHash.put("aircraftModel", t._2().split(":")[4]);
-                    coordinateAsHash.put("origin", t._2().split(":")[5]);
-                    coordinateAsHash.put("destination", t._2().split(":")[6]);
-                    jedis.hmset(t._1(), coordinateAsHash);
+                    Map<String, String> infomationAsHash = new HashMap<String, String>();
+                    infomationAsHash.put("latitude", t._2().split(":")[0]);
+                    infomationAsHash.put("longitude", t._2().split(":")[1]);
+                    infomationAsHash.put("altitude", t._2().split(":")[2]);
+                    infomationAsHash.put("speed", t._2().split(":")[3]);
+                    infomationAsHash.put("aircraftModel", t._2().split(":")[4]);
+                    infomationAsHash.put("origin", t._2().split(":")[5]);
+                    infomationAsHash.put("destination", t._2().split(":")[6]);
+                    jedis.hmset(t._1(), infomationAsHash);
                 }
                 return null;
             }
