@@ -7,8 +7,7 @@ class AircraftsController < ApplicationController
 	puts aircraft.to_json
 	aircrafts << aircraft
      end
-     @lastAircrafts = aircrafts.last(10)
-	puts @lastAircrafts	  
+     @lastAircrafts = aircrafts.last(8)
      @aircraft = @lastAircrafts.first()
    end
 end

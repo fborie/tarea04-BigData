@@ -131,7 +131,7 @@ public class App
 
         allInfo.foreachRDD(new Function<JavaPairRDD<String, String>, Void>() {
             public Void call(JavaPairRDD<String, String> rdd) {
-                Jedis jedis = new Jedis("localhost");
+                Jedis jedis = new Jedis("localhost:6379");
                 for (Tuple2<String, String> t: rdd.collect()) {
                     Map<String, String> coordinateAsHash = new HashMap<String, String>();
                     coordinateAsHash.put("latitude", t._2().split(":")[0]);

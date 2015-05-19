@@ -1,7 +1,7 @@
 class Aircraft
 		
 	attr_accessor :key, :latitude, :longitude, :speed,
-		:model, :origin, :destiny
+		:model, :origin, :destination
 
 	def initialize(key)
  	   self.key = key
@@ -11,7 +11,7 @@ class Aircraft
 	   self.speed = hash['speed']
 	   self.model = hash['aircraftModel']
 	   self.origin = hash['origin']
-           self.destiny = hash['destiny']
+           self.destination = hash['destination']
 	  
 	end
 	

@@ -9,7 +9,8 @@
      <div class="col-md-6">
      	<div style="background-color: white;">
 	   <table class="table table-hover table-bordered">
-              <thead>	
+             <caption>Recent Flights information </caption> 
+	     <thead>	
                  <tr>
                     <th>Key</th>
 	            <th> Latitude</th>
@@ -23,13 +24,13 @@
 	     <tbody>
 	        <% @lastAircrafts.each do |aircraft| %>
 	           <tr>
-	             <td><% aircraft.key%></td> 
-                     <td><% aircraft.latitude %></td>
-	             <td><% aircraft.longitude %></td>
-                     <td><% aircraft.speed%></td>
-	             <td><% aircraft.model%></td>
-	             <td><%aircraft.origin%></td>
-	             <td><%aircraft.destiny%></td>
+	             <td><%= aircraft.key%></td> 
+                     <td><%= aircraft.latitude %></td>
+	             <td><%= aircraft.longitude %></td>
+                     <td><%= aircraft.speed%></td>
+	             <td><%= aircraft.model%></td>
+	             <td><%= aircraft.origin%></td>
+	             <td><%= aircraft.destination%></td>
 	           </tr>
 	        <% end %>
 	     </tbody>
@@ -43,7 +44,6 @@
   
   $(document).ready(function(){
     var aircraft = '{"latitude":<%= @aircraft.latitude %>, "longitude":<%= @aircraft.longitude %>}';    // pass ruby variable to javascript
-    alert(aircraft)    
     var aircraftJson = JSON.parse(aircraft)    
     handler = Gmaps.build('Google');
     handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
